@@ -1,0 +1,19 @@
+{
+  "title": "Process Holdout Evaluation",
+  "category": "Generalization",
+  "status": "COMPLETED",
+  "purpose": "Evaluate a conditional field surrogate on process settings excluded from training.",
+  "configuration": {
+    "dataset": "synthetic_process_fields_v1",
+    "split": "process_holdout",
+    "model": "demo_operator_small",
+    "seed": 0
+  },
+  "metrics": {
+    "field_mae": 0.0214,
+    "condition_count": 9,
+    "sample_count": 180
+  },
+  "notice": "Synthetic portfolio demonstration data; not a scientific result."
+}
+

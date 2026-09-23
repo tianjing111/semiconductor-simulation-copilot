@@ -1,0 +1,18 @@
+{
+  "title": "Surrogate Runtime Profile",
+  "category": "Performance",
+  "status": "COMPLETED",
+  "purpose": "Record synthetic runtime and memory telemetry for the demo surrogate.",
+  "configuration": {
+    "device": "demo_gpu",
+    "batch_size": 1,
+    "grid": "256x256"
+  },
+  "metrics": {
+    "latency_ms": 18.6,
+    "peak_memory_mb": 742,
+    "sample_count": 100
+  },
+  "notice": "Synthetic portfolio demonstration data; not a hardware benchmark."
+}
+

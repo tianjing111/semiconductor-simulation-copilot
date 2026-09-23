@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+.DS_Store
+
+# Generated from the synthetic public examples.
+data/
+
+# Never commit simulator or model artifacts.
+*.log
+!examples/logs/*.log
+*.gds
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.slo
+checkpoints/
+outputs/
+

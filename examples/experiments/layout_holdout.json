@@ -1,0 +1,19 @@
+{
+  "title": "Layout Holdout Evaluation",
+  "category": "Generalization",
+  "status": "COMPLETED",
+  "purpose": "Measure prediction error on synthetic layouts not observed during training.",
+  "configuration": {
+    "dataset": "synthetic_process_fields_v1",
+    "split": "layout_holdout",
+    "model": "demo_operator_small",
+    "seed": 0
+  },
+  "metrics": {
+    "field_mae": 0.0287,
+    "layout_count": 40,
+    "sample_count": 360
+  },
+  "notice": "Synthetic portfolio demonstration data; not a scientific result."
+}
+

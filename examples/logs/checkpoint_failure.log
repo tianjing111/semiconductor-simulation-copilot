@@ -1,0 +1,6 @@
+2026-01-16 13:08:44 INFO restoring checkpoint examples/checkpoints/demo_model.pt
+Traceback (most recent call last):
+  File "evaluate_surrogate.py", line 91, in <module>
+    checkpoint = load_checkpoint(path)
+_pickle.UnpicklingError: Weights only load failed. Unsupported global: GLOBAL pathlib.PosixPath
+

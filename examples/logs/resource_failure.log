@@ -1,0 +1,6 @@
+2026-01-17 15:30:02 INFO device=cuda batch_size=16 grid=1024x1024
+Traceback (most recent call last):
+  File "train_surrogate.py", line 228, in train_step
+    loss.backward()
+RuntimeError: CUDA out of memory. Tried to allocate 2.00 GiB.
+

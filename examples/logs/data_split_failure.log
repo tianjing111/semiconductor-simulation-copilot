@@ -1,0 +1,7 @@
+2026-01-15 09:42:17 INFO loading experiment manifest
+2026-01-15 09:42:17 INFO dataset_root=demo_data/process_fields
+Traceback (most recent call last):
+  File "train_surrogate.py", line 184, in <module>
+    main()
+RuntimeError: No usable samples found under demo_data/process_fields for split test
+

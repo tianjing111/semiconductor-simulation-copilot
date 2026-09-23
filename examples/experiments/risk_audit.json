@@ -1,0 +1,18 @@
+{
+  "title": "Prediction Risk Audit",
+  "category": "Risk Audit",
+  "status": "COMPLETED",
+  "purpose": "Demonstrate how an uncertainty score can be compared with realized field error.",
+  "configuration": {
+    "dataset": "synthetic_process_fields_v1",
+    "risk_score": "ensemble_disagreement",
+    "ensemble_size": 3
+  },
+  "metrics": {
+    "pearson_r": 0.71,
+    "spearman_r": 0.68,
+    "sample_count": 120
+  },
+  "notice": "Synthetic portfolio demonstration data; not a calibrated production model."
+}
+

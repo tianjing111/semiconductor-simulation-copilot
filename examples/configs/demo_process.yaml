@@ -1,0 +1,11 @@
+schema_version: "1.0"
+data_policy: synthetic_demo
+grid:
+  width: 256
+  height: 256
+process:
+  dose: [44, 46, 48]
+  focus: [-0.03, 0.00, 0.03]
+outputs:
+  - developed_field
+
