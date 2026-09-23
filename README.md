@@ -1,5 +1,7 @@
 # Semiconductor Process Simulation Copilot
 
+[![tests](https://github.com/tianjing111/semiconductor-simulation-copilot/actions/workflows/tests.yml/badge.svg)](https://github.com/tianjing111/semiconductor-simulation-copilot/actions/workflows/tests.yml)
+
 An evidence-grounded AI assistant for semiconductor simulation workflows. It
 diagnoses run failures, retrieves source-linked technical evidence, organizes
 experiment memory, and reviews dry-run simulation plans behind a strict human
@@ -41,6 +43,16 @@ flowchart LR
 
 The optional model is outside the safety-critical path. See
 [docs/architecture.md](docs/architecture.md).
+
+## Engineering decisions
+
+| Decision | Rationale |
+| --- | --- |
+| Deterministic diagnostic core | Keeps failure classification testable and usable without an external model. |
+| Optional LLM only for summaries | Prevents generated text from changing evidence, actions or permissions. |
+| Source hashes on retrieved evidence | Makes every recommendation traceable to a specific public artifact. |
+| No simulator execution endpoint | Keeps expensive or licensed tools behind explicit human approval. |
+| Synthetic-only public examples | Demonstrates the contracts without exposing proprietary configurations or research data. |
 
 ## Quick start
 
