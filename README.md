@@ -25,6 +25,28 @@ approval boundary.
 - **Optional LLM summaries:** an OpenAI-compatible endpoint may summarize frozen
   findings, but it cannot change actions or permissions.
 
+## Evaluated RAG loop
+
+The public knowledge assistant supports section-aware keyword, local TF-IDF
+sparse-vector and hybrid retrieval. Answers return one of four explicit states:
+`ANSWERED`, `CLARIFICATION_REQUIRED`, `INSUFFICIENT_EVIDENCE` or
+`CONFLICTING_EVIDENCE`, together with file, section, chunk and SHA-256 citations.
+
+The frozen synthetic benchmark contains 40 questions: 22 answerable, 8
+ambiguous, 6 out of scope and 4 with deliberately conflicting evidence.
+
+| Retrieval | Recall@5 | MRR |
+| --- | ---: | ---: |
+| Keyword | 0.885 | 0.686 |
+| TF-IDF sparse vector | 1.000 | 0.933 |
+| Hybrid | 1.000 | 0.926 |
+
+Hybrid grounded answering reaches 1.000 status accuracy, citation support,
+abstention accuracy and conflict detection on this small regression set. These
+numbers validate the bundled contracts; they are not production or semantic-
+embedding benchmarks. See [the protocol](benchmarks/rag/README.md) and
+[generated report](benchmarks/rag/reports/REPORT.md).
+
 ## Architecture
 
 ```mermaid
@@ -67,6 +89,8 @@ cd semiconductor-simulation-copilot
 Open [http://127.0.0.1:8765](http://127.0.0.1:8765).
 For a one-click walkthrough using the bundled synthetic failure trace, open
 [http://127.0.0.1:8765/?demo=1](http://127.0.0.1:8765/?demo=1).
+For the grounded RAG walkthrough, open
+[http://127.0.0.1:8765/?rag=1](http://127.0.0.1:8765/?rag=1).
 
 Run the checks:
 
@@ -85,6 +109,10 @@ curl http://127.0.0.1:8765/api/status
 curl -X POST http://127.0.0.1:8765/api/diagnose \
   -H 'Content-Type: application/json' \
   --data '{"text":"RuntimeError: No usable samples found for split test"}'
+
+curl -X POST http://127.0.0.1:8765/api/ask \
+  -H 'Content-Type: application/json' \
+  --data '{"question":"What signed focus values are valid?","mode":"hybrid"}'
 ```
 
 Or use the CLI:
@@ -92,6 +120,9 @@ Or use the CLI:
 ```bash
 PYTHONPATH=src python3 -m simulation_copilot.cli \
   diagnose examples/logs/checkpoint_failure.log
+
+PYTHONPATH=src python3 -m simulation_copilot.cli \
+  ask "What should I check after a No usable samples found error?"
 ```
 
 ## Optional grounded generation
@@ -128,6 +159,7 @@ examples/                 synthetic logs, experiments, configs and plans
 docs/                     architecture and public data policy
 tests/                    unit and integration-style service tests
 scripts/                  release audit and regression checks
+benchmarks/rag/           frozen questions, protocol and generated reports
 ```
 
 ## Scope

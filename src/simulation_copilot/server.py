@@ -81,7 +81,16 @@ class Handler(BaseHTTPRequestHandler):
             if parsed.path == "/api/diagnose":
                 self.send_json(self.service.diagnose(str(payload.get("text", ""))))
             elif parsed.path == "/api/search":
-                self.send_json({"results": self.service.search(str(payload.get("query", "")), int(payload.get("limit", 6)))})
+                self.send_json({"results": self.service.search(
+                    str(payload.get("query", "")),
+                    int(payload.get("limit", 6)),
+                    str(payload.get("mode", "hybrid")),
+                )})
+            elif parsed.path == "/api/ask":
+                self.send_json(self.service.ask(
+                    str(payload.get("question", "")),
+                    str(payload.get("mode", "hybrid")),
+                ))
             else:
                 self.send_json({"error": "Unknown API route"}, HTTPStatus.NOT_FOUND)
         except (OSError, ValueError, json.JSONDecodeError) as exc:
@@ -110,4 +119,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

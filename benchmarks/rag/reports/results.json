@@ -1,0 +1,3467 @@
+{
+  "generated_at": "2026-09-27T07:26:10.127776+00:00",
+  "protocol": "benchmarks/rag/README.md",
+  "question_file": "benchmarks/rag/questions.jsonl",
+  "question_count": 40,
+  "retrieval": {
+    "keyword": {
+      "case_count": 26,
+      "recall_at_5": 0.8846153846153846,
+      "mrr": 0.685897435897436
+    },
+    "tfidf": {
+      "case_count": 26,
+      "recall_at_5": 1.0,
+      "mrr": 0.9326923076923077
+    },
+    "hybrid": {
+      "case_count": 26,
+      "recall_at_5": 1.0,
+      "mrr": 0.9262820512820513
+    }
+  },
+  "answering": {
+    "status_accuracy": 1.0,
+    "citation_support_rate": 1.0,
+    "abstention_accuracy": 1.0,
+    "conflict_detection_accuracy": 1.0
+  },
+  "cases": [
+    {
+      "case": {
+        "id": "rag-001",
+        "category": "answerable",
+        "question": "What does the demo dose parameter mean and what range is accepted?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Dose"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.5,
+          "top_5": [
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 28.153933
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Dose",
+              "score": 26.149282
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 20.67997
+            },
+            {
+              "path": "examples/demo_plan.json",
+              "section": "Document",
+              "score": 15.131297
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 13.720003
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Dose",
+              "score": 0.383359
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 0.252619
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 0.197249
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Synthetic Parameter Reference",
+              "score": 0.163593
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.1218
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Dose",
+              "score": 0.967959
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 0.692969
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.556514
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 0.502285
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Synthetic Parameter Reference",
+              "score": 0.41101
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Dose",
+            "sha256": "29a3710245f327b07e1e73da7b422d8b78586936e8c94014bdda3dd0b02f3db9",
+            "chunk_id": "29a3710245f3:1"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-002",
+        "category": "answerable",
+        "question": "What signed focus values are valid in the public demonstration?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Focus"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.5,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 21.974536
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 21.677269
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 16.404726
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 16.035706
+            },
+            {
+              "path": "examples/demo_plan.json",
+              "section": "Document",
+              "score": 14.483864
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 0.386246
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 0.229119
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Grid size",
+              "score": 0.135001
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.121933
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 0.099255
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 0.993912
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 0.654641
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 0.553607
+            },
+            {
+              "path": "examples/demo_plan.json",
+              "section": "Document",
+              "score": 0.42116
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.390603
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Focus",
+            "sha256": "29a3710245f327b07e1e73da7b422d8b78586936e8c94014bdda3dd0b02f3db9",
+            "chunk_id": "29a3710245f3:2"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-003",
+        "category": "answerable",
+        "question": "Which grid_size values does the public workflow support?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Grid size"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Grid size",
+              "score": 22.679189
+            },
+            {
+              "path": "src/simulation_copilot/retrieval.py",
+              "section": "Document",
+              "score": 11.035325
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Simulation Workflow Guide",
+              "score": 11.030425
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 9.450841
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 8.774222
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Grid size",
+              "score": 0.258954
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Simulation Workflow Guide",
+              "score": 0.194894
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 0.134523
+            },
+            {
+              "path": "src/simulation_copilot/__init__.py",
+              "section": "Document",
+              "score": 0.100504
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Synthetic Parameter Reference",
+              "score": 0.068916
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Grid size",
+              "score": 1.0
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Simulation Workflow Guide",
+              "score": 0.632806
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 0.459815
+            },
+            {
+              "path": "src/simulation_copilot/__init__.py",
+              "section": "Document",
+              "score": 0.28959
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Finite metrics",
+              "score": 0.279136
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Grid size",
+            "sha256": "29a3710245f327b07e1e73da7b422d8b78586936e8c94014bdda3dd0b02f3db9",
+            "chunk_id": "29a3710245f3:3"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-004",
+        "category": "answerable",
+        "question": "How large may max_solver_calls be in the synthetic planner?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Simulation budget"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": false,
+          "reciprocal_rank": 0.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Grid size",
+              "score": 5.641562
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 5.641562
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 5.641562
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 4.323228
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Budget exceeded",
+              "score": 4.323228
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.25,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 0.107261
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 0.083466
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Budget exceeded",
+              "score": 0.079488
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Simulation budget",
+              "score": 0.070048
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.036767
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.25,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 1.0
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 0.772831
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Budget exceeded",
+              "score": 0.752432
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Simulation budget",
+              "score": 0.704026
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.638531
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Simulation budget",
+            "sha256": "29a3710245f327b07e1e73da7b422d8b78586936e8c94014bdda3dd0b02f3db9",
+            "chunk_id": "29a3710245f3:4"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-005",
+        "category": "answerable",
+        "question": "Why must each condition use a unique run_id?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Run identifiers"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.5,
+          "top_5": [
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 19.250122
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Run identifiers",
+              "score": 19.097803
+            },
+            {
+              "path": "examples/demo_plan.json",
+              "section": "Document",
+              "score": 17.9811
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 12.356692
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 12.011474
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Run identifiers",
+              "score": 0.211537
+            },
+            {
+              "path": "src/simulation_copilot/retrieval.py",
+              "section": "Document",
+              "score": 0.127785
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 0.114998
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Acceptance outcome",
+              "score": 0.104617
+            },
+            {
+              "path": "examples/demo_plan.json",
+              "section": "Document",
+              "score": 0.097273
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Run identifiers",
+              "score": 0.996439
+            },
+            {
+              "path": "examples/demo_plan.json",
+              "section": "Document",
+              "score": 0.673245
+            },
+            {
+              "path": "src/simulation_copilot/retrieval.py",
+              "section": "Document",
+              "score": 0.601742
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.600745
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 0.542863
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Run identifiers",
+            "sha256": "29a3710245f327b07e1e73da7b422d8b78586936e8c94014bdda3dd0b02f3db9",
+            "chunk_id": "29a3710245f3:5"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-006",
+        "category": "answerable",
+        "question": "What information must be present when preparing a simulation task?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Prepare a task"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.5,
+          "top_5": [
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 15.897007
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 15.825924
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 13.35185
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 10.61983
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Interrupted task",
+              "score": 10.037922
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.158019
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Interrupted task",
+              "score": 0.109856
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Inspect task state",
+              "score": 0.100343
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Simulation budget",
+              "score": 0.091226
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Simulation Workflow Guide",
+              "score": 0.083937
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.997988
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Interrupted task",
+              "score": 0.666509
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Inspect task state",
+              "score": 0.633398
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Simulation budget",
+              "score": 0.600786
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.555963
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Prepare a task",
+            "sha256": "c3c59414930fe1a86c6b67c72cb5d3091861c12fbf2a1e9545f66749cd341d8b",
+            "chunk_id": "c3c59414930f:1"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-007",
+        "category": "answerable",
+        "question": "What does configuration validation check before planning?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Validate configuration"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": false,
+          "reciprocal_rank": 0.0,
+          "top_5": [
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 22.699148
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Checkpoint load rejected",
+              "score": 20.628311
+            },
+            {
+              "path": "examples/logs/checkpoint_failure.log",
+              "section": "Document",
+              "score": 20.628311
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 17.527843
+            },
+            {
+              "path": "docs/PUBLISHING.md",
+              "section": "Pre-publication checks",
+              "score": 16.8433
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 0.193435
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.156781
+            },
+            {
+              "path": "docs/diagnostic_playbook.md",
+              "section": "Interrupted runs",
+              "score": 0.138605
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Budget exceeded",
+              "score": 0.134171
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Dose",
+              "score": 0.12884
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 0.869225
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.670587
+            },
+            {
+              "path": "docs/diagnostic_playbook.md",
+              "section": "Interrupted runs",
+              "score": 0.632733
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.621864
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Budget exceeded",
+              "score": 0.6063
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Validate configuration",
+            "sha256": "c3c59414930fe1a86c6b67c72cb5d3091861c12fbf2a1e9545f66749cd341d8b",
+            "chunk_id": "c3c59414930f:2"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-008",
+        "category": "answerable",
+        "question": "How does the planner enforce a dry-run plan?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Create a dry-run plan"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.5,
+          "top_5": [
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 54.64651
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 39.863043
+            },
+            {
+              "path": "examples/demo_plan.json",
+              "section": "Document",
+              "score": 35.99203
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 15.149625
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 13.923032
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 0.379088
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.114689
+            },
+            {
+              "path": "docs/architecture.md",
+              "section": "Architecture",
+              "score": 0.102384
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Simulation budget",
+              "score": 0.053128
+            },
+            {
+              "path": "docs/architecture.md",
+              "section": "Security boundaries",
+              "score": 0.047299
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 0.878262
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.616396
+            },
+            {
+              "path": "examples/demo_plan.json",
+              "section": "Document",
+              "score": 0.332833
+            },
+            {
+              "path": "docs/architecture.md",
+              "section": "Architecture",
+              "score": 0.22091
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 0.147627
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Create a dry-run plan",
+            "sha256": "c3c59414930fe1a86c6b67c72cb5d3091861c12fbf2a1e9545f66749cd341d8b",
+            "chunk_id": "c3c59414930f:3"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-009",
+        "category": "answerable",
+        "question": "Can retrieved text bypass human approval and launch the solver?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Human approval boundary"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Human approval boundary",
+              "score": 34.134119
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 26.641171
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 19.269264
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 16.189823
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 15.335041
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Human approval boundary",
+              "score": 0.423483
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Synthetic Error Catalog",
+              "score": 0.079055
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 0.076621
+            },
+            {
+              "path": "src/simulation_copilot/retrieval.py",
+              "section": "Document",
+              "score": 0.074341
+            },
+            {
+              "path": "docs/architecture.md",
+              "section": "Security boundaries",
+              "score": 0.06579
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Human approval boundary",
+              "score": 1.0
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 0.45073
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.270569
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.269749
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 0.248013
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Human approval boundary",
+            "sha256": "c3c59414930fe1a86c6b67c72cb5d3091861c12fbf2a1e9545f66749cd341d8b",
+            "chunk_id": "c3c59414930f:4"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-010",
+        "category": "answerable",
+        "question": "Which task states are recognized by task inspection?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Inspect task state"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Inspect task state",
+              "score": 26.022348
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 12.947464
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 12.112036
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Interrupted task",
+              "score": 10.037922
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 9.133013
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Inspect task state",
+              "score": 0.375092
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.139827
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Interrupted task",
+              "score": 0.113727
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.106077
+            },
+            {
+              "path": "docs/PUBLISHING.md",
+              "section": "Before every future push",
+              "score": 0.06111
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Inspect task state",
+              "score": 1.0
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.428928
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Interrupted task",
+              "score": 0.340342
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.294463
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 0.209451
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Inspect task state",
+            "sha256": "c3c59414930fe1a86c6b67c72cb5d3091861c12fbf2a1e9545f66749cd341d8b",
+            "chunk_id": "c3c59414930f:5"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-011",
+        "category": "answerable",
+        "question": "How should existing simulation results be reviewed?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Review results"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.25,
+          "top_5": [
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 18.141869
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 18.141869
+            },
+            {
+              "path": "src/simulation_copilot/server.py",
+              "section": "Document",
+              "score": 14.015931
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Review results",
+              "score": 13.276773
+            },
+            {
+              "path": "src/simulation_copilot/cli.py",
+              "section": "Document",
+              "score": 11.106388
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Review results",
+              "score": 0.210266
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.181517
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.168874
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Simulation Workflow Guide",
+              "score": 0.104059
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 0.100421
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "top_5": [
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.924799
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.89173
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Review results",
+              "score": 0.879324
+            },
+            {
+              "path": "src/simulation_copilot/server.py",
+              "section": "Document",
+              "score": 0.480611
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Simulation Workflow Guide",
+              "score": 0.449005
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/workflow_guide.md",
+            "section": "Review results",
+            "sha256": "c3c59414930fe1a86c6b67c72cb5d3091861c12fbf2a1e9545f66749cd341d8b",
+            "chunk_id": "c3c59414930f:6"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-012",
+        "category": "answerable",
+        "question": "What should I check after a No usable samples found error?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "No usable samples"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.5,
+          "top_5": [
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 81.878108
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "No usable samples",
+              "score": 61.654101
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 43.538765
+            },
+            {
+              "path": "src/simulation_copilot/server.py",
+              "section": "Document",
+              "score": 37.760458
+            },
+            {
+              "path": "src/simulation_copilot/server.py",
+              "section": "Document",
+              "score": 30.190435
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "No usable samples",
+              "score": 0.621674
+            },
+            {
+              "path": "docs/diagnostic_playbook.md",
+              "section": "Dataset and split failures",
+              "score": 0.245696
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.227864
+            },
+            {
+              "path": "examples/logs/data_split_failure.log",
+              "section": "Document",
+              "score": 0.185091
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Synthetic Error Catalog",
+              "score": 0.14281
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "No usable samples",
+              "score": 0.888849
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.651594
+            },
+            {
+              "path": "docs/diagnostic_playbook.md",
+              "section": "Dataset and split failures",
+              "score": 0.379315
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.296449
+            },
+            {
+              "path": "examples/logs/data_split_failure.log",
+              "section": "Document",
+              "score": 0.278915
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "No usable samples",
+            "sha256": "651fedb8212ffb29432251f0789c88968dd51a94f9f4c42af4fb1ca03d9e147e",
+            "chunk_id": "651fedb8212f:1"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-013",
+        "category": "answerable",
+        "question": "What does Weights only load failed indicate?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "Checkpoint load rejected"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Checkpoint load rejected",
+              "score": 31.580186
+            },
+            {
+              "path": "src/simulation_copilot/server.py",
+              "section": "Document",
+              "score": 23.426669
+            },
+            {
+              "path": "examples/logs/checkpoint_failure.log",
+              "section": "Document",
+              "score": 21.361838
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 21.361838
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 18.406913
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Checkpoint load rejected",
+              "score": 0.335795
+            },
+            {
+              "path": "examples/logs/checkpoint_failure.log",
+              "section": "Document",
+              "score": 0.176327
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Review results",
+              "score": 0.111744
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.082242
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Completion state",
+              "score": 0.060591
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Checkpoint load rejected",
+              "score": 1.0
+            },
+            {
+              "path": "examples/logs/checkpoint_failure.log",
+              "section": "Document",
+              "score": 0.593201
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.439099
+            },
+            {
+              "path": "src/simulation_copilot/server.py",
+              "section": "Document",
+              "score": 0.333817
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Review results",
+              "score": 0.291134
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "Checkpoint load rejected",
+            "sha256": "651fedb8212ffb29432251f0789c88968dd51a94f9f4c42af4fb1ca03d9e147e",
+            "chunk_id": "651fedb8212f:2"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-014",
+        "category": "answerable",
+        "question": "What is the first response to CUDA out of memory?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "Resource exhaustion"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.25,
+          "top_5": [
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 31.064224
+            },
+            {
+              "path": "src/simulation_copilot/memory.py",
+              "section": "Document",
+              "score": 24.66745
+            },
+            {
+              "path": "examples/experiments/layout_holdout.json",
+              "section": "Document",
+              "score": 21.844444
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Resource exhaustion",
+              "score": 21.80847
+            },
+            {
+              "path": "examples/logs/resource_failure.log",
+              "section": "Document",
+              "score": 17.464396
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Resource exhaustion",
+              "score": 0.307988
+            },
+            {
+              "path": "examples/logs/resource_failure.log",
+              "section": "Document",
+              "score": 0.212905
+            },
+            {
+              "path": "docs/diagnostic_playbook.md",
+              "section": "Accelerator memory",
+              "score": 0.175955
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.105988
+            },
+            {
+              "path": "src/simulation_copilot/generation.py",
+              "section": "Document",
+              "score": 0.05705
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Resource exhaustion",
+              "score": 0.86592
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.639272
+            },
+            {
+              "path": "examples/logs/resource_failure.log",
+              "section": "Document",
+              "score": 0.633194
+            },
+            {
+              "path": "docs/diagnostic_playbook.md",
+              "section": "Accelerator memory",
+              "score": 0.548682
+            },
+            {
+              "path": "src/simulation_copilot/memory.py",
+              "section": "Document",
+              "score": 0.386906
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "Resource exhaustion",
+            "sha256": "651fedb8212ffb29432251f0789c88968dd51a94f9f4c42af4fb1ca03d9e147e",
+            "chunk_id": "651fedb8212f:3"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-015",
+        "category": "answerable",
+        "question": "Can a completed task pass when a declared artifact is missing?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "Missing artifact"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Missing artifact",
+              "score": 37.00436
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 29.283895
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 22.104035
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 21.200095
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 20.92238
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Missing artifact",
+              "score": 0.581053
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.238906
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.233304
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 0.231072
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Inspect task state",
+              "score": 0.228188
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Missing artifact",
+              "score": 1.0
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.582252
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.475267
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Inspect task state",
+              "score": 0.429837
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 0.406538
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "Missing artifact",
+            "sha256": "651fedb8212ffb29432251f0789c88968dd51a94f9f4c42af4fb1ca03d9e147e",
+            "chunk_id": "651fedb8212f:4"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-016",
+        "category": "answerable",
+        "question": "How should an INTERRUPTED task with partial artifacts be handled?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "Interrupted task"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Interrupted task",
+              "score": 33.547559
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 17.75725
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Inspect task state",
+              "score": 14.579935
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 13.31143
+            },
+            {
+              "path": "docs/diagnostic_playbook.md",
+              "section": "Interrupted runs",
+              "score": 13.058289
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Interrupted task",
+              "score": 0.492839
+            },
+            {
+              "path": "docs/diagnostic_playbook.md",
+              "section": "Interrupted runs",
+              "score": 0.20445
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.195172
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Inspect task state",
+              "score": 0.167835
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.144438
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Interrupted task",
+              "score": 1.0
+            },
+            {
+              "path": "docs/diagnostic_playbook.md",
+              "section": "Interrupted runs",
+              "score": 0.403324
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.399382
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.396365
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Inspect task state",
+              "score": 0.382873
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "Interrupted task",
+            "sha256": "651fedb8212ffb29432251f0789c88968dd51a94f9f4c42af4fb1ca03d9e147e",
+            "chunk_id": "651fedb8212f:5"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-017",
+        "category": "answerable",
+        "question": "What happens when planned calls exceed max_solver_calls?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "Budget exceeded"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.5,
+          "top_5": [
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 43.072575
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Budget exceeded",
+              "score": 31.633391
+            },
+            {
+              "path": "examples/demo_plan.json",
+              "section": "Document",
+              "score": 20.220275
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 17.460038
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Simulation budget",
+              "score": 17.460038
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Budget exceeded",
+              "score": 0.300266
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 0.221182
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.082365
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Simulation budget",
+              "score": 0.055551
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 0.055136
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Budget exceeded",
+              "score": 0.880489
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.600869
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 0.587554
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Simulation budget",
+              "score": 0.284166
+            },
+            {
+              "path": "examples/demo_plan.json",
+              "section": "Document",
+              "score": 0.259365
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/error_catalog.md",
+            "section": "Budget exceeded",
+            "sha256": "651fedb8212ffb29432251f0789c88968dd51a94f9f4c42af4fb1ca03d9e147e",
+            "chunk_id": "651fedb8212f:6"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-018",
+        "category": "answerable",
+        "question": "Which task status is required for final acceptance?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Completion state"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "top_5": [
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 19.511232
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 18.866879
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Completion state",
+              "score": 18.582806
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 15.077918
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 14.893655
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.5,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.311255
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Completion state",
+              "score": 0.258656
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 0.226866
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.194363
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Inspect task state",
+              "score": 0.178522
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.5,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.985139
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Completion state",
+              "score": 0.885643
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 0.649309
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.642064
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 0.639316
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Completion state",
+            "sha256": "fbb7841e785736914d964cd211c8a75bf6ee38c66a28b161dd6a72087f0341cc",
+            "chunk_id": "fbb7841e7857:1"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-019",
+        "category": "answerable",
+        "question": "What properties must every required artifact have?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Required artifacts"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 37.614766
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Missing artifact",
+              "score": 14.227649
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 12.311071
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 10.870564
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Acceptance outcome",
+              "score": 10.551799
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.38489
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Missing artifact",
+              "score": 0.194164
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 0.125266
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Run identifiers",
+              "score": 0.093002
+            },
+            {
+              "path": "docs/PUBLISHING.md",
+              "section": "Before every future push",
+              "score": 0.091326
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 1.0
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Missing artifact",
+              "score": 0.447667
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Create a dry-run plan",
+              "score": 0.326284
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 0.233858
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Run identifiers",
+              "score": 0.224697
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Required artifacts",
+            "sha256": "fbb7841e785736914d964cd211c8a75bf6ee38c66a28b161dd6a72087f0341cc",
+            "chunk_id": "fbb7841e7857:2"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-020",
+        "category": "answerable",
+        "question": "Are NaN and infinity allowed in required metrics?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Finite metrics"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Finite metrics",
+              "score": 31.257872
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 20.056161
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 11.030425
+            },
+            {
+              "path": "src/simulation_copilot/memory.py",
+              "section": "Document",
+              "score": 7.293017
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 7.033894
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Finite metrics",
+              "score": 0.481902
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.152778
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 0.076393
+            },
+            {
+              "path": "docs/diagnostic_playbook.md",
+              "section": "Interrupted runs",
+              "score": 0.05417
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 0.053752
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Finite metrics",
+              "score": 1.0
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.333166
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 0.288736
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 0.161401
+            },
+            {
+              "path": "src/simulation_copilot/memory.py",
+              "section": "Document",
+              "score": 0.145393
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Finite metrics",
+            "sha256": "fbb7841e785736914d964cd211c8a75bf6ee38c66a28b161dd6a72087f0341cc",
+            "chunk_id": "fbb7841e7857:3"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-021",
+        "category": "answerable",
+        "question": "Can a result pass operational acceptance after exceeding its frozen budget?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Budget compliance"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 32.45336
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 21.509818
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 17.913178
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 17.835049
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Acceptance outcome",
+              "score": 14.928343
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 0.343019
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 0.204462
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 0.19334
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Budget exceeded",
+              "score": 0.127332
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Acceptance outcome",
+              "score": 0.11629
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 1.0
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 0.576222
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 0.557305
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.432002
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Acceptance outcome",
+              "score": 0.393458
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Budget compliance",
+            "sha256": "fbb7841e785736914d964cd211c8a75bf6ee38c66a28b161dd6a72087f0341cc",
+            "chunk_id": "fbb7841e7857:4"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-022",
+        "category": "answerable",
+        "question": "Which provenance fields are required before a result can pass?",
+        "expected_status": "ANSWERED",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Provenance completeness"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 26.50579
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 20.019723
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 17.974242
+            },
+            {
+              "path": "src/simulation_copilot/cli.py",
+              "section": "Document",
+              "score": 16.822499
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 16.822499
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 0.37481
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 0.17212
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.154709
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 0.112004
+            },
+            {
+              "path": "src/simulation_copilot/cli.py",
+              "section": "Document",
+              "score": 0.104698
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 1.0
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 0.504239
+            },
+            {
+              "path": "src/simulation_copilot/cli.py",
+              "section": "Document",
+              "score": 0.439238
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.419112
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 0.414289
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "ANSWERED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Provenance completeness",
+            "sha256": "fbb7841e785736914d964cd211c8a75bf6ee38c66a28b161dd6a72087f0341cc",
+            "chunk_id": "fbb7841e7857:5"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-023",
+        "category": "ambiguous",
+        "question": "Why did it fail?",
+        "expected_status": "CLARIFICATION_REQUIRED",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "CLARIFICATION_REQUIRED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-024",
+        "category": "ambiguous",
+        "question": "Why was it rejected?",
+        "expected_status": "CLARIFICATION_REQUIRED",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "CLARIFICATION_REQUIRED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-025",
+        "category": "ambiguous",
+        "question": "What went wrong?",
+        "expected_status": "CLARIFICATION_REQUIRED",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "CLARIFICATION_REQUIRED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-026",
+        "category": "ambiguous",
+        "question": "Why did this not pass?",
+        "expected_status": "CLARIFICATION_REQUIRED",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "CLARIFICATION_REQUIRED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-027",
+        "category": "ambiguous",
+        "question": "Is this valid?",
+        "expected_status": "CLARIFICATION_REQUIRED",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "CLARIFICATION_REQUIRED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-028",
+        "category": "ambiguous",
+        "question": "Can I run it?",
+        "expected_status": "CLARIFICATION_REQUIRED",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "CLARIFICATION_REQUIRED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-029",
+        "category": "ambiguous",
+        "question": "What should I do?",
+        "expected_status": "CLARIFICATION_REQUIRED",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "CLARIFICATION_REQUIRED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-030",
+        "category": "ambiguous",
+        "question": "Is the result okay?",
+        "expected_status": "CLARIFICATION_REQUIRED",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "CLARIFICATION_REQUIRED",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-031",
+        "category": "out_of_scope",
+        "question": "What chamber pressure should I use for plasma etching?",
+        "expected_status": "INSUFFICIENT_EVIDENCE",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "INSUFFICIENT_EVIDENCE",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-032",
+        "category": "out_of_scope",
+        "question": "What is the refractive index of a proprietary absorber?",
+        "expected_status": "INSUFFICIENT_EVIDENCE",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "INSUFFICIENT_EVIDENCE",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-033",
+        "category": "out_of_scope",
+        "question": "How do I restart a commercial license server?",
+        "expected_status": "INSUFFICIENT_EVIDENCE",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "INSUFFICIENT_EVIDENCE",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-034",
+        "category": "out_of_scope",
+        "question": "What wafer temperature maximizes etch selectivity?",
+        "expected_status": "INSUFFICIENT_EVIDENCE",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "INSUFFICIENT_EVIDENCE",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-035",
+        "category": "out_of_scope",
+        "question": "Which production dose guarantees maximum yield?",
+        "expected_status": "INSUFFICIENT_EVIDENCE",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "INSUFFICIENT_EVIDENCE",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-036",
+        "category": "out_of_scope",
+        "question": "What is the secret API credential for the simulator?",
+        "expected_status": "INSUFFICIENT_EVIDENCE",
+        "expected_sources": []
+      },
+      "retrieval": {},
+      "answer": {
+        "observed_status": "INSUFFICIENT_EVIDENCE",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": []
+      }
+    },
+    {
+      "case": {
+        "id": "rag-037",
+        "category": "conflict",
+        "question": "Is a focus value of 0.08 valid according to the old and current notes?",
+        "expected_status": "CONFLICTING_EVIDENCE",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Focus"
+          },
+          {
+            "path": "docs/knowledge/deprecated_notes.md",
+            "section": "Deprecated focus range"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": false,
+          "reciprocal_rank": 0.5,
+          "top_5": [
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 23.477851
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 23.350846
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 22.046289
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 19.853952
+            },
+            {
+              "path": "src/simulation_copilot/retrieval.py",
+              "section": "Document",
+              "score": 19.745468
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 0.5,
+          "top_5": [
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated Demonstration Notes",
+              "score": 0.174789
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 0.153883
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 0.122126
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.075289
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Dose",
+              "score": 0.073462
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 0.931783
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated Demonstration Notes",
+              "score": 0.73822
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 0.72046
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.497147
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 0.45
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "CONFLICTING_EVIDENCE",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Focus",
+            "sha256": "29a3710245f327b07e1e73da7b422d8b78586936e8c94014bdda3dd0b02f3db9",
+            "chunk_id": "29a3710245f3:2"
+          },
+          {
+            "path": "docs/knowledge/deprecated_notes.md",
+            "section": "Deprecated focus range",
+            "sha256": "e22fa0ba931ab9ec7c1f4fe4ce54b86fbdb98aefd89450408667d04447348a22",
+            "chunk_id": "e22fa0ba931a:1"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-038",
+        "category": "conflict",
+        "question": "Which focus range is authoritative when the deprecated note disagrees?",
+        "expected_status": "CONFLICTING_EVIDENCE",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Focus"
+          },
+          {
+            "path": "docs/knowledge/deprecated_notes.md",
+            "section": "Deprecated focus range"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 51.619028
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 34.364705
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated Demonstration Notes",
+              "score": 24.734819
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 22.878268
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 16.439473
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 0.555067
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated Demonstration Notes",
+              "score": 0.289761
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 0.210136
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 0.207109
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.132855
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated focus range",
+              "score": 1.0
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated Demonstration Notes",
+              "score": 0.502748
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.431224
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 0.404665
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 0.351533
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "CONFLICTING_EVIDENCE",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/parameter_reference.md",
+            "section": "Focus",
+            "sha256": "29a3710245f327b07e1e73da7b422d8b78586936e8c94014bdda3dd0b02f3db9",
+            "chunk_id": "29a3710245f3:2"
+          },
+          {
+            "path": "docs/knowledge/deprecated_notes.md",
+            "section": "Deprecated focus range",
+            "sha256": "e22fa0ba931ab9ec7c1f4fe4ce54b86fbdb98aefd89450408667d04447348a22",
+            "chunk_id": "e22fa0ba931a:1"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-039",
+        "category": "conflict",
+        "question": "Does the presence of any output file prove completion under the old shortcut and canonical rules?",
+        "expected_status": "CONFLICTING_EVIDENCE",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Completion state"
+          },
+          {
+            "path": "docs/knowledge/deprecated_notes.md",
+            "section": "Deprecated completion shortcut"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 53.133411
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Completion state",
+              "score": 36.888796
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 32.987508
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 30.63571
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 23.53604
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 0.46111
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Completion state",
+              "score": 0.364183
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.163955
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 0.135362
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.089626
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 1.0
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Completion state",
+              "score": 0.746808
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.455022
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 0.386283
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 0.285626
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "CONFLICTING_EVIDENCE",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Completion state",
+            "sha256": "fbb7841e785736914d964cd211c8a75bf6ee38c66a28b161dd6a72087f0341cc",
+            "chunk_id": "fbb7841e7857:1"
+          },
+          {
+            "path": "docs/knowledge/deprecated_notes.md",
+            "section": "Deprecated completion shortcut",
+            "sha256": "e22fa0ba931ab9ec7c1f4fe4ce54b86fbdb98aefd89450408667d04447348a22",
+            "chunk_id": "e22fa0ba931a:2"
+          }
+        ]
+      }
+    },
+    {
+      "case": {
+        "id": "rag-040",
+        "category": "conflict",
+        "question": "Should an output-file completion shortcut override the current acceptance rules?",
+        "expected_status": "CONFLICTING_EVIDENCE",
+        "expected_sources": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Completion state"
+          },
+          {
+            "path": "docs/knowledge/deprecated_notes.md",
+            "section": "Deprecated completion shortcut"
+          }
+        ]
+      },
+      "retrieval": {
+        "keyword": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 38.837054
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 26.317784
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Completion state",
+              "score": 25.514694
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 16.42196
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Acceptance outcome",
+              "score": 11.68656
+            }
+          ]
+        },
+        "tfidf": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 0.374563
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 0.345834
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Completion state",
+              "score": 0.211316
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 0.119709
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Acceptance outcome",
+              "score": 0.117863
+            }
+          ]
+        },
+        "hybrid": {
+          "hit_at_5": true,
+          "reciprocal_rank": 1.0,
+          "top_5": [
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 1.0
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 0.812756
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Completion state",
+              "score": 0.605927
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Budget compliance",
+              "score": 0.311189
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Acceptance outcome",
+              "score": 0.308479
+            }
+          ]
+        }
+      },
+      "answer": {
+        "observed_status": "CONFLICTING_EVIDENCE",
+        "status_correct": true,
+        "citation_supported": true,
+        "citations": [
+          {
+            "path": "docs/knowledge/acceptance_rules.md",
+            "section": "Completion state",
+            "sha256": "fbb7841e785736914d964cd211c8a75bf6ee38c66a28b161dd6a72087f0341cc",
+            "chunk_id": "fbb7841e7857:1"
+          },
+          {
+            "path": "docs/knowledge/deprecated_notes.md",
+            "section": "Deprecated completion shortcut",
+            "sha256": "e22fa0ba931ab9ec7c1f4fe4ce54b86fbdb98aefd89450408667d04447348a22",
+            "chunk_id": "e22fa0ba931a:2"
+          }
+        ]
+      }
+    }
+  ]
+}

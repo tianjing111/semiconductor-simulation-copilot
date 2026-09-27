@@ -18,7 +18,7 @@ async function request(url, options = {}) {
 function sourceMarkup(source) {
   return `<article class="source-item">
     <div class="source-topline"><span class="source-title">${escapeHtml(source.title)}</span><span class="source-type">${escapeHtml(source.source_type)}</span></div>
-    <div class="source-path">${escapeHtml(source.path)}</div>
+    <div class="source-path">${escapeHtml(source.path)} · ${escapeHtml(source.section || "Document")}</div>
     <p class="source-excerpt">${escapeHtml(source.excerpt)}</p>
     <div class="source-hash">SHA-256 ${escapeHtml(source.sha256)}</div>
   </article>`;
@@ -66,15 +66,41 @@ async function analyze() {
 async function searchKnowledge(event) {
   event.preventDefault();
   const query = document.querySelector("#knowledge-query").value;
+  const mode = document.querySelector("#retrieval-mode").value;
   const container = document.querySelector("#knowledge-results");
   container.innerHTML = `<div class="empty-state compact"><p>Searching indexed evidence...</p></div>`;
   try {
     const payload = await request("/api/search", {
-      method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({query, limit: 10})
+      method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({query, mode, limit: 10})
     });
     container.innerHTML = payload.results.length
       ? payload.results.map(sourceMarkup).join("")
       : `<div class="empty-state compact"><h2>No matching evidence</h2><p>Try a simulator error signature or experiment identifier.</p></div>`;
+  } catch (error) {
+    container.innerHTML = `<div class="error-message">${escapeHtml(error.message)}</div>`;
+  }
+}
+
+async function askKnowledge() {
+  const question = document.querySelector("#knowledge-query").value;
+  const mode = document.querySelector("#retrieval-mode").value;
+  const container = document.querySelector("#knowledge-results");
+  container.innerHTML = `<div class="empty-state compact"><p>Checking the evidence boundary...</p></div>`;
+  try {
+    const payload = await request("/api/ask", {
+      method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({question, mode})
+    });
+    const citations = payload.citations.length
+      ? payload.citations.map((item) => `<li><code>${escapeHtml(item.path)}</code> · ${escapeHtml(item.section)} · sha ${escapeHtml(item.sha256.slice(0, 12))}</li>`).join("")
+      : "<li>No source cited.</li>";
+    const evidence = payload.retrieval.length
+      ? payload.retrieval.map(sourceMarkup).join("")
+      : `<div class="empty-state compact"><p>No evidence retrieved.</p></div>`;
+    container.innerHTML = `<article class="answer-card">
+      <div class="answer-status">${escapeHtml(payload.status.replaceAll("_", " "))}</div>
+      <p>${escapeHtml(payload.answer)}</p>
+      <h2>Citations</h2><ul class="citation-list">${citations}</ul>
+    </article><div class="source-list">${evidence}</div>`;
   } catch (error) {
     container.innerHTML = `<div class="error-message">${escapeHtml(error.message)}</div>`;
   }
@@ -125,7 +151,12 @@ async function initialize() {
     document.querySelector("#data-policy").textContent = state.status.data_policy === "SYNTHETIC_ONLY" ? "Synthetic" : "Review";
     document.querySelector("#mode-label").textContent = state.status.mode.replaceAll("_", " ").toLowerCase();
     await Promise.all([loadExperiments(), loadPlan()]);
-    if (new URLSearchParams(window.location.search).get("demo") === "1") {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("rag") === "1") {
+      document.querySelector('[data-view="knowledge"]').click();
+      document.querySelector("#knowledge-query").value = "What signed focus values are valid in the public demonstration?";
+      await askKnowledge();
+    } else if (params.get("demo") === "1") {
       document.querySelector("#log-input").value = state.examples[0];
       await analyze();
     }
@@ -150,6 +181,7 @@ document.querySelector("#log-file").addEventListener("change", async (event) => 
   document.querySelector("#input-note").textContent = `${file.name} loaded locally; content has not been persisted.`;
 });
 document.querySelector("#knowledge-form").addEventListener("submit", searchKnowledge);
+document.querySelector("#ask-button").addEventListener("click", askKnowledge);
 let filterTimer;
 document.querySelector("#experiment-query").addEventListener("input", (event) => {
   clearTimeout(filterTimer);

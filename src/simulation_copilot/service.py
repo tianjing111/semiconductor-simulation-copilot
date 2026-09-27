@@ -7,6 +7,7 @@ from .diagnostics import diagnose_text
 from .generation import GroundedGenerator
 from .memory import ExperimentMemory
 from .planning import load_and_validate_plan
+from .qa import GroundedAnswerer
 from .retrieval import EvidenceIndex
 
 
@@ -14,6 +15,7 @@ class CopilotService:
     def __init__(self, root: Path) -> None:
         self.root = root.resolve()
         self.index = EvidenceIndex(self.root / "data" / "knowledge_index.jsonl")
+        self.answerer = GroundedAnswerer(self.index)
         self.memory = ExperimentMemory(self.root / "data" / "experiment_cards.json")
         self.generator = GroundedGenerator()
 
@@ -32,8 +34,11 @@ class CopilotService:
             },
         }
 
-    def search(self, query: str, limit: int = 6) -> list[dict[str, Any]]:
-        return self.index.search(query, limit)
+    def search(self, query: str, limit: int = 6, mode: str = "hybrid") -> list[dict[str, Any]]:
+        return self.index.search(query, limit, mode)
+
+    def ask(self, question: str, mode: str = "hybrid") -> dict[str, Any]:
+        return self.answerer.answer(question, mode=mode)
 
     def experiments(self, query: str = "", limit: int = 40) -> list[dict[str, Any]]:
         return self.memory.search(query, limit)

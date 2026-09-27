@@ -163,9 +163,16 @@ p { line-height: 1.55; }
 .retrieval-block { padding: 18px; border-top: 1px solid var(--line); }
 .retrieval-block > h2 { margin-bottom: 12px; }
 
-.search-bar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 10px; margin-bottom: 16px; }
-.search-bar input, .table-search { min-height: 38px; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: 4px; outline: none; background: #fff; }
-.search-bar input:focus, .table-search:focus { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(8,127,140,.12); }
+.search-bar { display: grid; grid-template-columns: minmax(0, 1fr) 120px auto auto; gap: 10px; padding: 10px; margin-bottom: 16px; }
+.search-bar input, .search-bar select, .table-search { min-height: 38px; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: 4px; outline: none; background: #fff; }
+.search-bar input:focus, .search-bar select:focus, .table-search:focus { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(8,127,140,.12); }
+.secondary-button { min-height: 38px; padding: 0 16px; border: 1px solid var(--teal-dark); border-radius: 5px; background: #fff; color: var(--teal-dark); font-weight: 750; }
+.secondary-button:hover { background: #eef6f7; }
+.answer-card { margin-bottom: 12px; padding: 18px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--teal); border-radius: 6px; }
+.answer-card > p { margin: 9px 0 16px; }
+.answer-card h2 { margin-bottom: 7px; }
+.answer-status { color: var(--teal-dark); font-size: 10px; font-weight: 800; text-transform: uppercase; }
+.citation-list { margin: 0; padding-left: 18px; color: var(--muted); font-size: 11px; line-height: 1.7; }
 .source-list { display: grid; gap: 10px; }
 .source-item { padding: 14px 16px; }
 .source-topline { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
@@ -222,4 +229,6 @@ th:nth-child(5), td:nth-child(5) { width: 20%; }
   .plan-summary { grid-template-columns: 1fr 1fr; }
   .plan-stat:nth-child(2) { border-right: 0; }
   .plan-stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .search-bar { grid-template-columns: 1fr 1fr; }
+  .search-bar input { grid-column: 1 / -1; }
 }

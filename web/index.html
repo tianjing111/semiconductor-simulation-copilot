@@ -43,7 +43,7 @@
             <h1>Diagnose a simulation run</h1>
           </div>
           <div class="metric-strip" aria-label="System status">
-            <div><span id="knowledge-count">34</span><small>knowledge chunks</small></div>
+            <div><span id="knowledge-count">80</span><small>knowledge chunks</small></div>
             <div><span id="experiment-count">4</span><small>experiment cards</small></div>
             <div><span id="data-policy">Synthetic</span><small>data policy</small></div>
           </div>
@@ -96,6 +96,12 @@
         </div>
         <form class="search-bar" id="knowledge-form">
           <input id="knowledge-query" type="search" placeholder="Search simulator failures, split contracts, checkpoints..." aria-label="Knowledge query">
+          <select id="retrieval-mode" aria-label="Retrieval mode">
+            <option value="hybrid">Hybrid</option>
+            <option value="tfidf">TF-IDF</option>
+            <option value="keyword">Keyword</option>
+          </select>
+          <button class="secondary-button" id="ask-button" type="button">Ask</button>
           <button class="primary-button" type="submit">Search</button>
         </form>
         <div class="source-list" id="knowledge-results">

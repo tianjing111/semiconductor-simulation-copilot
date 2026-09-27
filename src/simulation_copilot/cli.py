@@ -17,16 +17,24 @@ def main() -> None:
     diagnose.add_argument("log", type=Path)
     search = subparsers.add_parser("search")
     search.add_argument("query")
+    search.add_argument("--mode", choices=("keyword", "tfidf", "hybrid"), default="hybrid")
+    ask = subparsers.add_parser("ask")
+    ask.add_argument("question")
+    ask.add_argument("--mode", choices=("keyword", "tfidf", "hybrid"), default="hybrid")
     args = parser.parse_args()
     root = args.root.resolve()
     if args.command == "build-assets":
         result = build(root)
     else:
         service = CopilotService(root)
-        result = service.diagnose(args.log.read_text(encoding="utf-8", errors="replace")) if args.command == "diagnose" else {"results": service.search(args.query)}
+        if args.command == "diagnose":
+            result = service.diagnose(args.log.read_text(encoding="utf-8", errors="replace"))
+        elif args.command == "ask":
+            result = service.ask(args.question, args.mode)
+        else:
+            result = {"results": service.search(args.query, mode=args.mode)}
     print(json.dumps(result, indent=2, ensure_ascii=True))
 
 
 if __name__ == "__main__":
     main()
-
