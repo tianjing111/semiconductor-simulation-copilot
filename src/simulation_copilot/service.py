@@ -3,12 +3,14 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
+from .agent import BoundedWorkflowAgent
 from .diagnostics import diagnose_text
 from .generation import GroundedGenerator
 from .memory import ExperimentMemory
 from .planning import load_and_validate_plan
 from .qa import GroundedAnswerer
 from .retrieval import EvidenceIndex
+from .tools import ToolRegistry
 
 
 class CopilotService:
@@ -18,12 +20,16 @@ class CopilotService:
         self.answerer = GroundedAnswerer(self.index)
         self.memory = ExperimentMemory(self.root / "data" / "experiment_cards.json")
         self.generator = GroundedGenerator()
+        self.tools = ToolRegistry(self.root, self.answerer, self.memory)
+        self.agent = BoundedWorkflowAgent(self.tools)
 
     def status(self) -> dict[str, Any]:
         return {
             "product": "Semiconductor Process Simulation Copilot",
             "mode": "READ_ONLY_PUBLIC_DEMO",
             "generation_mode": self.generator.mode,
+            "agent_planner_mode": "OPENAI_COMPATIBLE" if self.agent.planner.enabled else "DETERMINISTIC",
+            "allowed_tools": list(self.tools.names),
             "knowledge_chunks": len(self.index.rows),
             "experiment_cards": len(self.memory.cards),
             "data_policy": "SYNTHETIC_ONLY",
@@ -42,6 +48,9 @@ class CopilotService:
 
     def experiments(self, query: str = "", limit: int = 40) -> list[dict[str, Any]]:
         return self.memory.search(query, limit)
+
+    def agent_request(self, prompt: str, context: dict[str, Any] | None = None) -> dict[str, Any]:
+        return self.agent.run(prompt, context)
 
     def diagnose(self, text: str) -> dict[str, Any]:
         text = text.strip()

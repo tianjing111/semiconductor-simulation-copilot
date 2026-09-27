@@ -4,6 +4,29 @@ const state = { status: null, examples: [
   "epoch=100/100 validation_loss=0.0135\nartifact_manifest=outputs/demo_run/artifacts.json\nstatus: COMPLETED"
 ], exampleIndex: 0 };
 
+const agentScenarios = {
+  knowledge: {
+    request: "What signed focus values are valid in the public demonstration?",
+    context: {}
+  },
+  validate: {
+    request: "Check this configuration before planning",
+    context: {config: {task_id: "portfolio_review", grid_size: 128, max_solver_calls: 2, conditions: [
+      {run_id: "dose44_focus_minus0p03", dose: 44, focus: -0.03},
+      {run_id: "dose48_focus_plus0p03", dose: 48, focus: 0.03}
+    ]}}
+  },
+  plan: {
+    request: "Create a dry-run plan for human review",
+    context: {config: {task_id: "portfolio_plan", grid_size: 128, max_solver_calls: 2, conditions: [
+      {run_id: "dose44_focus_minus0p03", dose: 44, focus: -0.03},
+      {run_id: "dose48_focus_plus0p03", dose: 48, focus: 0.03}
+    ]}}
+  },
+  inspect: {request: "Inspect the run status", context: {run_id: "layout holdout"}},
+  summarize: {request: "Summarize the result metrics", context: {run_id: "runtime profile"}}
+};
+
 const escapeHtml = (value) => String(value ?? "")
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;")
   .replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
@@ -106,6 +129,49 @@ async function askKnowledge() {
   }
 }
 
+function setAgentScenario() {
+  const scenario = agentScenarios[document.querySelector("#agent-scenario").value];
+  document.querySelector("#agent-request").value = scenario.request;
+}
+
+function renderAgent(payload) {
+  const trace = payload.trace.map((item) => `<div class="trace-row">
+    <span>${escapeHtml(item.step)}</span><strong>${escapeHtml(item.tool)}</strong>
+    <span>${escapeHtml(item.status)}</span><small>${escapeHtml(item.arguments_source.replaceAll("_", " "))}</small>
+  </div>`).join("");
+  const citations = payload.citations.length
+    ? payload.citations.map((item) => `<li><code>${escapeHtml(item.path)}</code> · ${escapeHtml(item.section)} · sha ${escapeHtml(item.sha256.slice(0, 12))}</li>`).join("")
+    : "<li>No citation required or available.</li>";
+  document.querySelector("#agent-results").innerHTML = `<div class="agent-result-header">
+    <div><span class="answer-status">${escapeHtml(payload.status)}</span><h2>${escapeHtml(payload.message)}</h2></div>
+    <span class="badge">${escapeHtml(payload.planner_mode.replaceAll("_", " "))}</span>
+  </div>
+  <div class="agent-result-grid">
+    <div><h2>Tool trace</h2><div class="trace-list">${trace}</div></div>
+    <div><h2>Evidence</h2><ul class="citation-list">${citations}</ul></div>
+  </div>
+  <details class="payload-details"><summary>Structured tool result</summary><pre>${escapeHtml(JSON.stringify(payload.tool_result, null, 2))}</pre></details>`;
+}
+
+async function runAgent() {
+  const button = document.querySelector("#agent-run-button");
+  const scenario = agentScenarios[document.querySelector("#agent-scenario").value];
+  const requestText = document.querySelector("#agent-request").value;
+  button.disabled = true;
+  button.textContent = "Reviewing...";
+  try {
+    renderAgent(await request("/api/agent", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({request: requestText, context: scenario.context})
+    }));
+  } catch (error) {
+    document.querySelector("#agent-results").innerHTML = `<div class="error-message">${escapeHtml(error.message)}</div>`;
+  } finally {
+    button.disabled = false;
+    button.textContent = "Run review";
+  }
+}
+
 function formatMetric(metric) {
   let value = metric.value;
   if (typeof value === "number") value = Number.isInteger(value) ? value : Number(value.toPrecision(4));
@@ -156,6 +222,10 @@ async function initialize() {
       document.querySelector('[data-view="knowledge"]').click();
       document.querySelector("#knowledge-query").value = "What signed focus values are valid in the public demonstration?";
       await askKnowledge();
+    } else if (params.get("agent") === "1") {
+      document.querySelector('[data-view="agent"]').click();
+      setAgentScenario();
+      await runAgent();
     } else if (params.get("demo") === "1") {
       document.querySelector("#log-input").value = state.examples[0];
       await analyze();
@@ -182,6 +252,8 @@ document.querySelector("#log-file").addEventListener("change", async (event) => 
 });
 document.querySelector("#knowledge-form").addEventListener("submit", searchKnowledge);
 document.querySelector("#ask-button").addEventListener("click", askKnowledge);
+document.querySelector("#agent-scenario").addEventListener("change", setAgentScenario);
+document.querySelector("#agent-run-button").addEventListener("click", runAgent);
 let filterTimer;
 document.querySelector("#experiment-query").addEventListener("input", (event) => {
   clearTimeout(filterTimer);
@@ -189,3 +261,4 @@ document.querySelector("#experiment-query").addEventListener("input", (event) =>
 });
 
 initialize();
+setAgentScenario();

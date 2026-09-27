@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-27T07:26:10.127776+00:00",
+  "generated_at": "2026-09-27T07:37:06.307237+00:00",
   "protocol": "benchmarks/rag/README.md",
   "question_file": "benchmarks/rag/questions.jsonl",
   "question_count": 40,
   "retrieval": {
     "keyword": {
       "case_count": 26,
-      "recall_at_5": 0.8846153846153846,
-      "mrr": 0.685897435897436
+      "recall_at_5": 0.8461538461538461,
+      "mrr": 0.6294871794871795
     },
     "tfidf": {
       "case_count": 26,
       "recall_at_5": 1.0,
-      "mrr": 0.9326923076923077
+      "mrr": 0.9115384615384615
     },
     "hybrid": {
       "case_count": 26,
-      "recall_at_5": 1.0,
-      "mrr": 0.9262820512820513
+      "recall_at_5": 0.9615384615384616,
+      "mrr": 0.858974358974359
     }
   },
   "answering": {
@@ -48,27 +48,27 @@
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 28.153933
+              "score": 28.27088
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Dose",
-              "score": 26.149282
+              "score": 25.979903
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated focus range",
-              "score": 20.67997
+              "score": 21.294681
             },
             {
               "path": "examples/demo_plan.json",
               "section": "Document",
-              "score": 15.131297
+              "score": 14.636608
             },
             {
-              "path": "docs/knowledge/parameter_reference.md",
-              "section": "Focus",
-              "score": 13.720003
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 14.636608
             }
           ]
         },
@@ -79,27 +79,27 @@
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Dose",
-              "score": 0.383359
+              "score": 0.369125
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated focus range",
-              "score": 0.252619
+              "score": 0.264323
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Focus",
-              "score": 0.197249
+              "score": 0.202041
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Synthetic Parameter Reference",
-              "score": 0.163593
+              "score": 0.146046
             },
             {
-              "path": "src/simulation_copilot/planning.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 0.1218
+              "score": 0.0961
             }
           ]
         },
@@ -110,27 +110,27 @@
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Dose",
-              "score": 0.967959
+              "score": 0.963534
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated focus range",
-              "score": 0.692969
+              "score": 0.732801
             },
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 0.556514
+              "score": 0.572235
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Focus",
-              "score": 0.502285
+              "score": 0.523203
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Synthetic Parameter Reference",
-              "score": 0.41101
+              "score": 0.386717
             }
           ]
         }
@@ -165,32 +165,32 @@
       "retrieval": {
         "keyword": {
           "hit_at_5": true,
-          "reciprocal_rank": 0.5,
+          "reciprocal_rank": 0.3333333333333333,
           "top_5": [
             {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Validate configuration",
-              "score": 21.974536
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 21.812487
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 21.812487
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Focus",
-              "score": 21.677269
+              "score": 21.280412
             },
             {
-              "path": "src/simulation_copilot/planning.py",
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 19.689723
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 16.404726
-            },
-            {
-              "path": "docs/knowledge/deprecated_notes.md",
-              "section": "Deprecated focus range",
-              "score": 16.035706
-            },
-            {
-              "path": "examples/demo_plan.json",
-              "section": "Document",
-              "score": 14.483864
+              "score": 17.881293
             }
           ]
         },
@@ -201,27 +201,27 @@
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Focus",
-              "score": 0.386246
+              "score": 0.384043
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated focus range",
-              "score": 0.229119
+              "score": 0.21278
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Grid size",
-              "score": 0.135001
+              "score": 0.139702
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.100519
             },
             {
               "path": "src/simulation_copilot/planning.py",
               "section": "Document",
-              "score": 0.121933
-            },
-            {
-              "path": "docs/knowledge/acceptance_rules.md",
-              "section": "Budget compliance",
-              "score": 0.099255
+              "score": 0.099521
             }
           ]
         },
@@ -232,27 +232,27 @@
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Focus",
-              "score": 0.993912
+              "score": 0.989023
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated focus range",
-              "score": 0.654641
+              "score": 0.623157
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.593956
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.520451
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Validate configuration",
-              "score": 0.553607
-            },
-            {
-              "path": "examples/demo_plan.json",
-              "section": "Document",
-              "score": 0.42116
-            },
-            {
-              "path": "src/simulation_copilot/planning.py",
-              "section": "Document",
-              "score": 0.390603
+              "score": 0.516948
             }
           ]
         }
@@ -292,27 +292,27 @@
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Grid size",
-              "score": 22.679189
+              "score": 22.237306
             },
             {
-              "path": "src/simulation_copilot/retrieval.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 11.035325
+              "score": 21.969506
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 12.614918
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Simulation Workflow Guide",
-              "score": 11.030425
+              "score": 11.253083
             },
             {
-              "path": "src/simulation_copilot/qa.py",
+              "path": "src/simulation_copilot/retrieval.py",
               "section": "Document",
-              "score": 9.450841
-            },
-            {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Validate configuration",
-              "score": 8.774222
+              "score": 11.151701
             }
           ]
         },
@@ -323,27 +323,27 @@
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Grid size",
-              "score": 0.258954
+              "score": 0.230233
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Simulation Workflow Guide",
-              "score": 0.194894
+              "score": 0.204398
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Validate configuration",
-              "score": 0.134523
+              "score": 0.145426
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.113971
             },
             {
               "path": "src/simulation_copilot/__init__.py",
               "section": "Document",
-              "score": 0.100504
-            },
-            {
-              "path": "docs/knowledge/parameter_reference.md",
-              "section": "Synthetic Parameter Reference",
-              "score": 0.068916
+              "score": 0.104831
             }
           ]
         },
@@ -357,24 +357,24 @@
               "score": 1.0
             },
             {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.716845
+            },
+            {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Simulation Workflow Guide",
-              "score": 0.632806
+              "score": 0.716003
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Validate configuration",
-              "score": 0.459815
+              "score": 0.527738
             },
             {
-              "path": "src/simulation_copilot/__init__.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 0.28959
-            },
-            {
-              "path": "docs/knowledge/acceptance_rules.md",
-              "section": "Finite metrics",
-              "score": 0.279136
+              "score": 0.420538
             }
           ]
         }
@@ -412,91 +412,91 @@
           "reciprocal_rank": 0.0,
           "top_5": [
             {
-              "path": "docs/knowledge/parameter_reference.md",
-              "section": "Grid size",
-              "score": 5.641562
-            },
-            {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Create a dry-run plan",
-              "score": 5.641562
-            },
-            {
-              "path": "src/simulation_copilot/qa.py",
+              "path": "src/simulation_copilot/agent.py",
               "section": "Document",
-              "score": 5.641562
+              "score": 18.756091
             },
             {
-              "path": "docs/knowledge/acceptance_rules.md",
-              "section": "Budget compliance",
-              "score": 4.323228
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 18.756091
             },
             {
-              "path": "docs/knowledge/error_catalog.md",
-              "section": "Budget exceeded",
-              "score": 4.323228
+              "path": "docs/architecture.md",
+              "section": "Architecture",
+              "score": 14.290355
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 9.824619
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 9.824619
             }
           ]
         },
         "tfidf": {
           "hit_at_5": true,
-          "reciprocal_rank": 0.25,
+          "reciprocal_rank": 0.2,
           "top_5": [
+            {
+              "path": "docs/architecture.md",
+              "section": "Architecture",
+              "score": 0.116876
+            },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Create a dry-run plan",
-              "score": 0.107261
+              "score": 0.100315
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Budget compliance",
-              "score": 0.083466
+              "score": 0.073326
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Budget exceeded",
-              "score": 0.079488
+              "score": 0.070405
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Simulation budget",
-              "score": 0.070048
-            },
-            {
-              "path": "src/simulation_copilot/qa.py",
-              "section": "Document",
-              "score": 0.036767
+              "score": 0.062486
             }
           ]
         },
         "hybrid": {
-          "hit_at_5": true,
-          "reciprocal_rank": 0.25,
+          "hit_at_5": false,
+          "reciprocal_rank": 0.0,
           "top_5": [
+            {
+              "path": "docs/architecture.md",
+              "section": "Architecture",
+              "score": 0.892857
+            },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Create a dry-run plan",
-              "score": 1.0
+              "score": 0.600639
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 0.45
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 0.45
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Budget compliance",
-              "score": 0.772831
-            },
-            {
-              "path": "docs/knowledge/error_catalog.md",
-              "section": "Budget exceeded",
-              "score": 0.752432
-            },
-            {
-              "path": "docs/knowledge/parameter_reference.md",
-              "section": "Simulation budget",
-              "score": 0.704026
-            },
-            {
-              "path": "src/simulation_copilot/qa.py",
-              "section": "Document",
-              "score": 0.638531
+              "score": 0.442006
             }
           ]
         }
@@ -531,32 +531,32 @@
       "retrieval": {
         "keyword": {
           "hit_at_5": true,
-          "reciprocal_rank": 0.5,
+          "reciprocal_rank": 0.2,
           "top_5": [
             {
-              "path": "src/simulation_copilot/planning.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 19.250122
+              "score": 40.332465
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 31.09414
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 27.137164
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 24.322597
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Run identifiers",
-              "score": 19.097803
-            },
-            {
-              "path": "examples/demo_plan.json",
-              "section": "Document",
-              "score": 17.9811
-            },
-            {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Prepare a task",
-              "score": 12.356692
-            },
-            {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Validate configuration",
-              "score": 12.011474
+              "score": 18.249766
             }
           ]
         },
@@ -567,58 +567,58 @@
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Run identifiers",
-              "score": 0.211537
+              "score": 0.186979
             },
             {
               "path": "src/simulation_copilot/retrieval.py",
               "section": "Document",
-              "score": 0.127785
+              "score": 0.141891
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.139915
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Create a dry-run plan",
-              "score": 0.114998
+              "score": 0.113271
             },
             {
-              "path": "docs/knowledge/acceptance_rules.md",
-              "section": "Acceptance outcome",
-              "score": 0.104617
-            },
-            {
-              "path": "examples/demo_plan.json",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 0.097273
+              "score": 0.110741
             }
           ]
         },
         "hybrid": {
           "hit_at_5": true,
-          "reciprocal_rank": 1.0,
+          "reciprocal_rank": 0.5,
           "top_5": [
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.775746
+            },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Run identifiers",
-              "score": 0.996439
+              "score": 0.753617
             },
             {
-              "path": "examples/demo_plan.json",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 0.673245
+              "score": 0.682934
             },
             {
               "path": "src/simulation_copilot/retrieval.py",
               "section": "Document",
-              "score": 0.601742
+              "score": 0.552068
             },
             {
-              "path": "src/simulation_copilot/planning.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 0.600745
-            },
-            {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Create a dry-run plan",
-              "score": 0.542863
+              "score": 0.467058
             }
           ]
         }
@@ -653,32 +653,32 @@
       "retrieval": {
         "keyword": {
           "hit_at_5": true,
-          "reciprocal_rank": 0.5,
+          "reciprocal_rank": 0.3333333333333333,
           "top_5": [
             {
-              "path": "src/simulation_copilot/planning.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 15.897007
+              "score": 27.133767
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 17.282783
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 15.825924
+              "score": 16.518082
             },
             {
-              "path": "src/simulation_copilot/diagnostics.py",
+              "path": "src/simulation_copilot/planning.py",
               "section": "Document",
-              "score": 13.35185
+              "score": 16.283939
             },
             {
-              "path": "src/simulation_copilot/service.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 10.61983
-            },
-            {
-              "path": "docs/knowledge/error_catalog.md",
-              "section": "Interrupted task",
-              "score": 10.037922
+              "score": 14.200112
             }
           ]
         },
@@ -689,27 +689,27 @@
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 0.158019
+              "score": 0.164961
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Interrupted task",
-              "score": 0.109856
+              "score": 0.114491
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Inspect task state",
-              "score": 0.100343
+              "score": 0.107869
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Simulation budget",
-              "score": 0.091226
+              "score": 0.09172
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Simulation Workflow Guide",
-              "score": 0.083937
+              "score": 0.084075
             }
           ]
         },
@@ -720,27 +720,27 @@
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 0.997988
+              "score": 0.823944
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.571896
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Interrupted task",
-              "score": 0.666509
+              "score": 0.557921
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Inspect task state",
-              "score": 0.633398
+              "score": 0.535844
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Simulation budget",
-              "score": 0.600786
-            },
-            {
-              "path": "src/simulation_copilot/diagnostics.py",
-              "section": "Document",
-              "score": 0.555963
+              "score": 0.474357
             }
           ]
         }
@@ -780,89 +780,89 @@
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 22.699148
+              "score": 23.020751
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Checkpoint load rejected",
-              "score": 20.628311
+              "score": 20.560609
             },
             {
               "path": "examples/logs/checkpoint_failure.log",
               "section": "Document",
-              "score": 20.628311
+              "score": 20.560609
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 17.527843
+              "score": 18.226511
             },
             {
-              "path": "docs/PUBLISHING.md",
-              "section": "Pre-publication checks",
-              "score": 16.8433
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 17.28581
             }
           ]
         },
         "tfidf": {
           "hit_at_5": true,
-          "reciprocal_rank": 1.0,
+          "reciprocal_rank": 0.5,
           "top_5": [
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.177915
+            },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Validate configuration",
-              "score": 0.193435
+              "score": 0.165705
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 0.156781
+              "score": 0.155487
             },
             {
               "path": "docs/diagnostic_playbook.md",
               "section": "Interrupted runs",
-              "score": 0.138605
+              "score": 0.147212
             },
             {
-              "path": "docs/knowledge/error_catalog.md",
-              "section": "Budget exceeded",
-              "score": 0.134171
-            },
-            {
-              "path": "docs/knowledge/parameter_reference.md",
-              "section": "Dose",
-              "score": 0.12884
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.145559
             }
           ]
         },
         "hybrid": {
           "hit_at_5": true,
-          "reciprocal_rank": 1.0,
+          "reciprocal_rank": 0.5,
           "top_5": [
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.82644
+            },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Validate configuration",
-              "score": 0.869225
+              "score": 0.805203
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.787871
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 0.670587
+              "score": 0.697615
             },
             {
               "path": "docs/diagnostic_playbook.md",
               "section": "Interrupted runs",
-              "score": 0.632733
-            },
-            {
-              "path": "src/simulation_copilot/diagnostics.py",
-              "section": "Document",
-              "score": 0.621864
-            },
-            {
-              "path": "docs/knowledge/error_catalog.md",
-              "section": "Budget exceeded",
-              "score": 0.6063
+              "score": 0.693836
             }
           ]
         }
@@ -897,32 +897,32 @@
       "retrieval": {
         "keyword": {
           "hit_at_5": true,
-          "reciprocal_rank": 0.5,
+          "reciprocal_rank": 0.25,
           "top_5": [
             {
               "path": "src/simulation_copilot/planning.py",
               "section": "Document",
-              "score": 54.64651
+              "score": 51.038487
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 38.709107
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 36.887754
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Create a dry-run plan",
-              "score": 39.863043
+              "score": 36.244797
             },
             {
               "path": "examples/demo_plan.json",
               "section": "Document",
-              "score": 35.99203
-            },
-            {
-              "path": "src/simulation_copilot/planning.py",
-              "section": "Document",
-              "score": 15.149625
-            },
-            {
-              "path": "src/simulation_copilot/service.py",
-              "section": "Document",
-              "score": 13.923032
+              "score": 33.906507
             }
           ]
         },
@@ -933,27 +933,27 @@
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Create a dry-run plan",
-              "score": 0.379088
-            },
-            {
-              "path": "src/simulation_copilot/planning.py",
-              "section": "Document",
-              "score": 0.114689
+              "score": 0.325046
             },
             {
               "path": "docs/architecture.md",
               "section": "Architecture",
-              "score": 0.102384
+              "score": 0.164117
             },
             {
-              "path": "docs/knowledge/parameter_reference.md",
-              "section": "Simulation budget",
-              "score": 0.053128
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.104298
             },
             {
-              "path": "docs/architecture.md",
-              "section": "Security boundaries",
-              "score": 0.047299
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.076411
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 0.061918
             }
           ]
         },
@@ -964,27 +964,27 @@
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Create a dry-run plan",
-              "score": 0.878262
+              "score": 0.869566
             },
             {
               "path": "src/simulation_copilot/planning.py",
               "section": "Document",
-              "score": 0.616396
-            },
-            {
-              "path": "examples/demo_plan.json",
-              "section": "Document",
-              "score": 0.332833
+              "score": 0.62648
             },
             {
               "path": "docs/architecture.md",
               "section": "Architecture",
-              "score": 0.22091
+              "score": 0.548891
             },
             {
-              "path": "src/simulation_copilot/service.py",
+              "path": "src/simulation_copilot/agent.py",
               "section": "Document",
-              "score": 0.147627
+              "score": 0.427891
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.364346
             }
           ]
         }
@@ -1024,27 +1024,27 @@
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Human approval boundary",
-              "score": 34.134119
+              "score": 34.701686
             },
             {
               "path": "src/simulation_copilot/service.py",
               "section": "Document",
-              "score": 26.641171
+              "score": 16.852654
             },
             {
               "path": "src/simulation_copilot/planning.py",
               "section": "Document",
-              "score": 19.269264
+              "score": 16.836608
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 16.216659
             },
             {
               "path": "src/simulation_copilot/service.py",
               "section": "Document",
-              "score": 16.189823
-            },
-            {
-              "path": "src/simulation_copilot/diagnostics.py",
-              "section": "Document",
-              "score": 15.335041
+              "score": 15.973222
             }
           ]
         },
@@ -1055,27 +1055,27 @@
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Human approval boundary",
-              "score": 0.423483
-            },
-            {
-              "path": "docs/knowledge/error_catalog.md",
-              "section": "Synthetic Error Catalog",
-              "score": 0.079055
-            },
-            {
-              "path": "src/simulation_copilot/service.py",
-              "section": "Document",
-              "score": 0.076621
+              "score": 0.423887
             },
             {
               "path": "src/simulation_copilot/retrieval.py",
               "section": "Document",
-              "score": 0.074341
+              "score": 0.077133
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Synthetic Error Catalog",
+              "score": 0.071946
+            },
+            {
+              "path": "src/simulation_copilot/service.py",
+              "section": "Document",
+              "score": 0.064357
             },
             {
               "path": "docs/architecture.md",
               "section": "Security boundaries",
-              "score": 0.06579
+              "score": 0.054241
             }
           ]
         },
@@ -1091,22 +1091,22 @@
             {
               "path": "src/simulation_copilot/service.py",
               "section": "Document",
-              "score": 0.45073
-            },
-            {
-              "path": "src/simulation_copilot/planning.py",
-              "section": "Document",
-              "score": 0.270569
+              "score": 0.302044
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 0.269749
+              "score": 0.272403
             },
             {
-              "path": "src/simulation_copilot/service.py",
+              "path": "src/simulation_copilot/retrieval.py",
               "section": "Document",
-              "score": 0.248013
+              "score": 0.248831
+            },
+            {
+              "path": "src/simulation_copilot/planning.py",
+              "section": "Document",
+              "score": 0.236314
             }
           ]
         }
@@ -1146,27 +1146,27 @@
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Inspect task state",
-              "score": 26.022348
+              "score": 27.186157
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 17.547826
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 12.947464
+              "score": 13.703515
             },
             {
-              "path": "src/simulation_copilot/service.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 12.112036
+              "score": 12.933654
             },
             {
-              "path": "docs/knowledge/error_catalog.md",
-              "section": "Interrupted task",
-              "score": 10.037922
-            },
-            {
-              "path": "src/simulation_copilot/qa.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 9.133013
+              "score": 12.933654
             }
           ]
         },
@@ -1177,27 +1177,27 @@
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Inspect task state",
-              "score": 0.375092
+              "score": 0.41687
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 0.139827
+              "score": 0.158973
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Interrupted task",
-              "score": 0.113727
+              "score": 0.126336
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.106077
+              "score": 0.118541
             },
             {
-              "path": "docs/PUBLISHING.md",
-              "section": "Before every future push",
-              "score": 0.06111
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.110269
             }
           ]
         },
@@ -1213,22 +1213,22 @@
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 0.428928
+              "score": 0.43657
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.435946
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Interrupted task",
-              "score": 0.340342
+              "score": 0.342538
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.294463
-            },
-            {
-              "path": "src/simulation_copilot/service.py",
-              "section": "Document",
-              "score": 0.209451
+              "score": 0.296122
             }
           ]
         }
@@ -1262,33 +1262,33 @@
       },
       "retrieval": {
         "keyword": {
-          "hit_at_5": true,
-          "reciprocal_rank": 0.25,
+          "hit_at_5": false,
+          "reciprocal_rank": 0.0,
           "top_5": [
             {
-              "path": "src/simulation_copilot/qa.py",
+              "path": "src/simulation_copilot/agent.py",
               "section": "Document",
-              "score": 18.141869
+              "score": 20.580794
             },
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 18.141869
+              "score": 18.491047
             },
             {
-              "path": "src/simulation_copilot/server.py",
+              "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 14.015931
+              "score": 18.491047
             },
             {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Review results",
-              "score": 13.276773
-            },
-            {
-              "path": "src/simulation_copilot/cli.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 11.106388
+              "score": 18.491047
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 15.123924
             }
           ]
         },
@@ -1299,27 +1299,27 @@
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Review results",
-              "score": 0.210266
+              "score": 0.200243
             },
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 0.181517
+              "score": 0.18464
             },
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 0.168874
+              "score": 0.178507
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Simulation Workflow Guide",
-              "score": 0.104059
+              "score": 0.106168
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Synthetic Result Acceptance Rules",
-              "score": 0.100421
+              "score": 0.091306
             }
           ]
         },
@@ -1330,27 +1330,27 @@
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 0.924799
+              "score": 0.911454
             },
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 0.89173
+              "score": 0.894606
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Review results",
-              "score": 0.879324
+              "score": 0.839999
             },
             {
-              "path": "src/simulation_copilot/server.py",
+              "path": "src/simulation_copilot/agent.py",
               "section": "Document",
-              "score": 0.480611
+              "score": 0.595073
             },
             {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Simulation Workflow Guide",
-              "score": 0.449005
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.494353
             }
           ]
         }
@@ -1390,27 +1390,27 @@
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 81.878108
+              "score": 82.589651
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "No usable samples",
-              "score": 61.654101
+              "score": 62.894136
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 43.538765
+              "score": 44.07372
             },
             {
               "path": "src/simulation_copilot/server.py",
               "section": "Document",
-              "score": 37.760458
+              "score": 37.811758
             },
             {
               "path": "src/simulation_copilot/server.py",
               "section": "Document",
-              "score": 30.190435
+              "score": 30.574882
             }
           ]
         },
@@ -1421,27 +1421,27 @@
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "No usable samples",
-              "score": 0.621674
+              "score": 0.619153
             },
             {
               "path": "docs/diagnostic_playbook.md",
               "section": "Dataset and split failures",
-              "score": 0.245696
+              "score": 0.240108
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 0.227864
+              "score": 0.219942
             },
             {
               "path": "examples/logs/data_split_failure.log",
               "section": "Document",
-              "score": 0.185091
+              "score": 0.179327
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Synthetic Error Catalog",
-              "score": 0.14281
+              "score": 0.1507
             }
           ]
         },
@@ -1452,27 +1452,27 @@
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "No usable samples",
-              "score": 0.888849
+              "score": 0.892687
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 0.651594
+              "score": 0.645376
             },
             {
               "path": "docs/diagnostic_playbook.md",
               "section": "Dataset and split failures",
-              "score": 0.379315
+              "score": 0.375506
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 0.296449
+              "score": 0.296292
             },
             {
               "path": "examples/logs/data_split_failure.log",
               "section": "Document",
-              "score": 0.278915
+              "score": 0.275511
             }
           ]
         }
@@ -1512,27 +1512,27 @@
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Checkpoint load rejected",
-              "score": 31.580186
-            },
-            {
-              "path": "src/simulation_copilot/server.py",
-              "section": "Document",
-              "score": 23.426669
+              "score": 32.587171
             },
             {
               "path": "examples/logs/checkpoint_failure.log",
               "section": "Document",
-              "score": 21.361838
+              "score": 21.98655
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 21.361838
+              "score": 21.98655
+            },
+            {
+              "path": "src/simulation_copilot/server.py",
+              "section": "Document",
+              "score": 21.147105
             },
             {
               "path": "src/simulation_copilot/service.py",
               "section": "Document",
-              "score": 18.406913
+              "score": 18.789795
             }
           ]
         },
@@ -1543,27 +1543,27 @@
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Checkpoint load rejected",
-              "score": 0.335795
+              "score": 0.33486
             },
             {
               "path": "examples/logs/checkpoint_failure.log",
               "section": "Document",
-              "score": 0.176327
+              "score": 0.176055
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Review results",
-              "score": 0.111744
+              "score": 0.107729
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 0.082242
+              "score": 0.082727
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Completion state",
-              "score": 0.060591
+              "score": 0.059551
             }
           ]
         },
@@ -1579,22 +1579,22 @@
             {
               "path": "examples/logs/checkpoint_failure.log",
               "section": "Document",
-              "score": 0.593201
+              "score": 0.592781
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 0.439099
+              "score": 0.439492
             },
             {
               "path": "src/simulation_copilot/server.py",
               "section": "Document",
-              "score": 0.333817
+              "score": 0.292023
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Review results",
-              "score": 0.291134
+              "score": 0.282814
             }
           ]
         }
@@ -1634,27 +1634,27 @@
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 31.064224
+              "score": 32.082842
             },
             {
               "path": "src/simulation_copilot/memory.py",
               "section": "Document",
-              "score": 24.66745
+              "score": 25.539146
             },
             {
               "path": "examples/experiments/layout_holdout.json",
               "section": "Document",
-              "score": 21.844444
+              "score": 22.770393
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Resource exhaustion",
-              "score": 21.80847
+              "score": 22.562091
             },
             {
               "path": "examples/logs/resource_failure.log",
               "section": "Document",
-              "score": 17.464396
+              "score": 18.119499
             }
           ]
         },
@@ -1665,27 +1665,27 @@
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Resource exhaustion",
-              "score": 0.307988
+              "score": 0.313171
             },
             {
               "path": "examples/logs/resource_failure.log",
               "section": "Document",
-              "score": 0.212905
+              "score": 0.219719
             },
             {
               "path": "docs/diagnostic_playbook.md",
               "section": "Accelerator memory",
-              "score": 0.175955
+              "score": 0.178314
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 0.105988
+              "score": 0.109692
             },
             {
               "path": "src/simulation_copilot/generation.py",
               "section": "Document",
-              "score": 0.05705
+              "score": 0.052377
             }
           ]
         },
@@ -1696,27 +1696,27 @@
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Resource exhaustion",
-              "score": 0.86592
+              "score": 0.86646
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 0.639272
+              "score": 0.642644
             },
             {
               "path": "examples/logs/resource_failure.log",
               "section": "Document",
-              "score": 0.633194
+              "score": 0.640023
             },
             {
               "path": "docs/diagnostic_playbook.md",
               "section": "Accelerator memory",
-              "score": 0.548682
+              "score": 0.546163
             },
             {
               "path": "src/simulation_copilot/memory.py",
               "section": "Document",
-              "score": 0.386906
+              "score": 0.388539
             }
           ]
         }
@@ -1756,27 +1756,27 @@
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Missing artifact",
-              "score": 37.00436
+              "score": 38.843827
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 29.283895
+              "score": 30.821482
             },
             {
               "path": "src/simulation_copilot/planning.py",
               "section": "Document",
-              "score": 22.104035
-            },
-            {
-              "path": "src/simulation_copilot/diagnostics.py",
-              "section": "Document",
-              "score": 21.200095
+              "score": 23.259349
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 20.92238
+              "score": 22.086189
+            },
+            {
+              "path": "src/simulation_copilot/diagnostics.py",
+              "section": "Document",
+              "score": 22.050416
             }
           ]
         },
@@ -1787,27 +1787,27 @@
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Missing artifact",
-              "score": 0.581053
+              "score": 0.583381
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.238906
+              "score": 0.24792
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 0.233304
-            },
-            {
-              "path": "docs/knowledge/acceptance_rules.md",
-              "section": "Provenance completeness",
-              "score": 0.231072
+              "score": 0.243967
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Inspect task state",
-              "score": 0.228188
+              "score": 0.237772
+            },
+            {
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Provenance completeness",
+              "score": 0.237637
             }
           ]
         },
@@ -1823,22 +1823,22 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.582252
+              "score": 0.590796
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 0.475267
+              "score": 0.485872
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Inspect task state",
-              "score": 0.429837
+              "score": 0.438074
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Provenance completeness",
-              "score": 0.406538
+              "score": 0.412408
             }
           ]
         }
@@ -1878,27 +1878,27 @@
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Interrupted task",
-              "score": 33.547559
+              "score": 35.12762
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 17.75725
+              "score": 18.717179
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Inspect task state",
-              "score": 14.579935
+              "score": 15.369966
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 13.31143
+              "score": 13.931562
             },
             {
               "path": "docs/diagnostic_playbook.md",
               "section": "Interrupted runs",
-              "score": 13.058289
+              "score": 13.64444
             }
           ]
         },
@@ -1909,27 +1909,27 @@
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Interrupted task",
-              "score": 0.492839
+              "score": 0.497994
             },
             {
               "path": "docs/diagnostic_playbook.md",
               "section": "Interrupted runs",
-              "score": 0.20445
+              "score": 0.207723
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.195172
+              "score": 0.201527
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Inspect task state",
-              "score": 0.167835
+              "score": 0.177481
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 0.144438
+              "score": 0.152948
             }
           ]
         },
@@ -1943,24 +1943,24 @@
               "score": 1.0
             },
             {
-              "path": "docs/diagnostic_playbook.md",
-              "section": "Interrupted runs",
-              "score": 0.403324
-            },
-            {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 0.399382
+              "score": 0.408695
+            },
+            {
+              "path": "docs/diagnostic_playbook.md",
+              "section": "Interrupted runs",
+              "score": 0.404207
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.396365
+              "score": 0.401042
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Inspect task state",
-              "score": 0.382873
+              "score": 0.392912
             }
           ]
         }
@@ -1995,32 +1995,32 @@
       "retrieval": {
         "keyword": {
           "hit_at_5": true,
-          "reciprocal_rank": 0.5,
+          "reciprocal_rank": 0.3333333333333333,
           "top_5": [
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 44.89883
+            },
             {
               "path": "src/simulation_copilot/planning.py",
               "section": "Document",
-              "score": 43.072575
+              "score": 41.531707
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Budget exceeded",
-              "score": 31.633391
+              "score": 30.659217
             },
             {
               "path": "examples/demo_plan.json",
               "section": "Document",
-              "score": 20.220275
+              "score": 19.237988
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Budget compliance",
-              "score": 17.460038
-            },
-            {
-              "path": "docs/knowledge/parameter_reference.md",
-              "section": "Simulation budget",
-              "score": 17.460038
+              "score": 16.747004
             }
           ]
         },
@@ -2031,58 +2031,58 @@
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Budget exceeded",
-              "score": 0.300266
+              "score": 0.281668
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.217743
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Budget compliance",
-              "score": 0.221182
+              "score": 0.204339
             },
             {
               "path": "src/simulation_copilot/planning.py",
               "section": "Document",
-              "score": 0.082365
+              "score": 0.078571
             },
             {
-              "path": "docs/knowledge/parameter_reference.md",
-              "section": "Simulation budget",
-              "score": 0.055551
-            },
-            {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Create a dry-run plan",
-              "score": 0.055136
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.064279
             }
           ]
         },
         "hybrid": {
           "hit_at_5": true,
-          "reciprocal_rank": 1.0,
+          "reciprocal_rank": 0.5,
           "top_5": [
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.875178
+            },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Budget exceeded",
-              "score": 0.880489
+              "score": 0.857283
             },
             {
               "path": "src/simulation_copilot/planning.py",
               "section": "Document",
-              "score": 0.600869
+              "score": 0.569676
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Budget compliance",
-              "score": 0.587554
+              "score": 0.566852
             },
             {
-              "path": "docs/knowledge/parameter_reference.md",
-              "section": "Simulation budget",
-              "score": 0.284166
-            },
-            {
-              "path": "examples/demo_plan.json",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 0.259365
+              "score": 0.277831
             }
           ]
         }
@@ -2120,29 +2120,29 @@
           "reciprocal_rank": 0.3333333333333333,
           "top_5": [
             {
-              "path": "src/simulation_copilot/qa.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 19.511232
+              "score": 22.461402
             },
             {
-              "path": "docs/knowledge/acceptance_rules.md",
-              "section": "Required artifacts",
-              "score": 18.866879
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 21.523658
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Completion state",
-              "score": 18.582806
+              "score": 19.189018
             },
             {
-              "path": "src/simulation_copilot/diagnostics.py",
+              "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 15.077918
+              "score": 19.084476
             },
             {
-              "path": "docs/knowledge/deprecated_notes.md",
-              "section": "Deprecated completion shortcut",
-              "score": 14.893655
+              "path": "docs/knowledge/acceptance_rules.md",
+              "section": "Required artifacts",
+              "score": 18.634613
             }
           ]
         },
@@ -2153,27 +2153,27 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.311255
+              "score": 0.291194
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Completion state",
-              "score": 0.258656
+              "score": 0.26944
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Synthetic Result Acceptance Rules",
-              "score": 0.226866
+              "score": 0.243309
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Prepare a task",
-              "score": 0.194363
+              "score": 0.211004
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Inspect task state",
-              "score": 0.178522
+              "score": 0.186566
             }
           ]
         },
@@ -2184,27 +2184,27 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.985139
+              "score": 0.923333
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Completion state",
-              "score": 0.885643
-            },
-            {
-              "path": "docs/knowledge/deprecated_notes.md",
-              "section": "Deprecated completion shortcut",
-              "score": 0.649309
-            },
-            {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Prepare a task",
-              "score": 0.642064
+              "score": 0.89335
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Synthetic Result Acceptance Rules",
-              "score": 0.639316
+              "score": 0.678415
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Prepare a task",
+              "score": 0.673079
+            },
+            {
+              "path": "docs/knowledge/deprecated_notes.md",
+              "section": "Deprecated completion shortcut",
+              "score": 0.656406
             }
           ]
         }
@@ -2244,27 +2244,27 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 37.614766
+              "score": 38.032182
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 33.056519
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Missing artifact",
-              "score": 14.227649
+              "score": 14.9837
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 13.450263
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Create a dry-run plan",
-              "score": 12.311071
-            },
-            {
-              "path": "src/simulation_copilot/diagnostics.py",
-              "section": "Document",
-              "score": 10.870564
-            },
-            {
-              "path": "docs/knowledge/acceptance_rules.md",
-              "section": "Acceptance outcome",
-              "score": 10.551799
+              "score": 12.567711
             }
           ]
         },
@@ -2275,27 +2275,27 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.38489
+              "score": 0.383947
             },
             {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Missing artifact",
-              "score": 0.194164
+              "score": 0.209111
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 0.177403
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Create a dry-run plan",
-              "score": 0.125266
+              "score": 0.136576
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Run identifiers",
-              "score": 0.093002
-            },
-            {
-              "path": "docs/PUBLISHING.md",
-              "section": "Before every future push",
-              "score": 0.091326
+              "score": 0.104923
             }
           ]
         },
@@ -2309,24 +2309,24 @@
               "score": 1.0
             },
             {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 0.645256
+            },
+            {
               "path": "docs/knowledge/error_catalog.md",
               "section": "Missing artifact",
-              "score": 0.447667
+              "score": 0.476839
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Create a dry-run plan",
-              "score": 0.326284
-            },
-            {
-              "path": "docs/knowledge/acceptance_rules.md",
-              "section": "Provenance completeness",
-              "score": 0.233858
+              "score": 0.344346
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Run identifiers",
-              "score": 0.224697
+              "score": 0.245918
             }
           ]
         }
@@ -2366,27 +2366,27 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Finite metrics",
-              "score": 31.257872
+              "score": 30.509288
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 20.942646
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Provenance completeness",
-              "score": 20.056161
+              "score": 20.404922
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 11.030425
+              "score": 10.347926
             },
             {
-              "path": "src/simulation_copilot/memory.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 7.293017
-            },
-            {
-              "path": "src/simulation_copilot/diagnostics.py",
-              "section": "Document",
-              "score": 7.033894
+              "score": 9.598076
             }
           ]
         },
@@ -2397,27 +2397,27 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Finite metrics",
-              "score": 0.481902
+              "score": 0.473899
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.152778
+              "score": 0.134181
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.105829
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated focus range",
-              "score": 0.076393
+              "score": 0.064241
             },
             {
-              "path": "docs/diagnostic_playbook.md",
-              "section": "Interrupted runs",
-              "score": 0.05417
-            },
-            {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Validate configuration",
-              "score": 0.053752
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 0.059787
             }
           ]
         },
@@ -2431,24 +2431,24 @@
               "score": 1.0
             },
             {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 0.378284
+            },
+            {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.333166
+              "score": 0.308356
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Provenance completeness",
-              "score": 0.288736
+              "score": 0.300965
             },
             {
-              "path": "docs/knowledge/deprecated_notes.md",
-              "section": "Deprecated focus range",
-              "score": 0.161401
-            },
-            {
-              "path": "src/simulation_copilot/memory.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 0.145393
+              "score": 0.264391
             }
           ]
         }
@@ -2488,27 +2488,27 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Budget compliance",
-              "score": 32.45336
+              "score": 32.21975
             },
             {
               "path": "src/simulation_copilot/planning.py",
               "section": "Document",
-              "score": 21.509818
+              "score": 21.259666
             },
             {
-              "path": "docs/knowledge/acceptance_rules.md",
-              "section": "Synthetic Result Acceptance Rules",
-              "score": 17.913178
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 19.144543
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Provenance completeness",
-              "score": 17.835049
+              "score": 18.129035
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
-              "section": "Acceptance outcome",
-              "score": 14.928343
+              "section": "Synthetic Result Acceptance Rules",
+              "score": 17.764073
             }
           ]
         },
@@ -2519,27 +2519,27 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Budget compliance",
-              "score": 0.343019
+              "score": 0.331924
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Synthetic Result Acceptance Rules",
-              "score": 0.204462
+              "score": 0.197282
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Provenance completeness",
-              "score": 0.19334
-            },
-            {
-              "path": "docs/knowledge/error_catalog.md",
-              "section": "Budget exceeded",
-              "score": 0.127332
+              "score": 0.191516
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Acceptance outcome",
-              "score": 0.11629
+              "score": 0.123193
+            },
+            {
+              "path": "docs/knowledge/error_catalog.md",
+              "section": "Budget exceeded",
+              "score": 0.113151
             }
           ]
         },
@@ -2555,22 +2555,22 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Synthetic Result Acceptance Rules",
-              "score": 0.576222
+              "score": 0.575001
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Provenance completeness",
-              "score": 0.557305
+              "score": 0.570543
             },
             {
               "path": "src/simulation_copilot/planning.py",
               "section": "Document",
-              "score": 0.432002
+              "score": 0.429625
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Acceptance outcome",
-              "score": 0.393458
+              "score": 0.423663
             }
           ]
         }
@@ -2610,27 +2610,27 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Provenance completeness",
-              "score": 26.50579
-            },
-            {
-              "path": "src/simulation_copilot/service.py",
-              "section": "Document",
-              "score": 20.019723
-            },
-            {
-              "path": "src/simulation_copilot/qa.py",
-              "section": "Document",
-              "score": 17.974242
-            },
-            {
-              "path": "src/simulation_copilot/cli.py",
-              "section": "Document",
-              "score": 16.822499
+              "score": 26.698304
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 16.822499
+              "score": 17.298684
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 17.082674
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 15.947586
+            },
+            {
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 15.324668
             }
           ]
         },
@@ -2641,27 +2641,27 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Provenance completeness",
-              "score": 0.37481
+              "score": 0.377491
             },
             {
               "path": "docs/knowledge/workflow_guide.md",
               "section": "Validate configuration",
-              "score": 0.17212
+              "score": 0.173917
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.154709
-            },
-            {
-              "path": "src/simulation_copilot/service.py",
-              "section": "Document",
-              "score": 0.112004
+              "score": 0.131685
             },
             {
               "path": "src/simulation_copilot/cli.py",
               "section": "Document",
-              "score": 0.104698
+              "score": 0.110963
+            },
+            {
+              "path": "docs/PUBLISHING.md",
+              "section": "Before every future push",
+              "score": 0.093318
             }
           ]
         },
@@ -2675,24 +2675,24 @@
               "score": 1.0
             },
             {
-              "path": "src/simulation_copilot/service.py",
-              "section": "Document",
-              "score": 0.504239
-            },
-            {
-              "path": "src/simulation_copilot/cli.py",
-              "section": "Document",
-              "score": 0.439238
-            },
-            {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 0.419112
+              "score": 0.426432
+            },
+            {
+              "path": "docs/knowledge/workflow_guide.md",
+              "section": "Validate configuration",
+              "score": 0.412586
+            },
+            {
+              "path": "src/simulation_copilot/qa.py",
+              "section": "Document",
+              "score": 0.371073
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Required artifacts",
-              "score": 0.414289
+              "score": 0.366279
             }
           ]
         }
@@ -2955,32 +2955,32 @@
       "retrieval": {
         "keyword": {
           "hit_at_5": false,
-          "reciprocal_rank": 0.5,
+          "reciprocal_rank": 0.3333333333333333,
           "top_5": [
             {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Validate configuration",
-              "score": 23.477851
+              "path": "src/simulation_copilot/agent.py",
+              "section": "Document",
+              "score": 25.35325
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 25.35325
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated focus range",
-              "score": 23.350846
+              "score": 23.156702
             },
             {
-              "path": "src/simulation_copilot/planning.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 22.046289
+              "score": 21.868344
             },
             {
-              "path": "src/simulation_copilot/service.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 19.853952
-            },
-            {
-              "path": "src/simulation_copilot/retrieval.py",
-              "section": "Document",
-              "score": 19.745468
+              "score": 21.812487
             }
           ]
         },
@@ -2991,27 +2991,27 @@
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated Demonstration Notes",
-              "score": 0.174789
+              "score": 0.180039
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated focus range",
-              "score": 0.153883
+              "score": 0.141274
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Focus",
-              "score": 0.122126
-            },
-            {
-              "path": "src/simulation_copilot/planning.py",
-              "section": "Document",
-              "score": 0.075289
+              "score": 0.107137
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Dose",
-              "score": 0.073462
+              "score": 0.076842
+            },
+            {
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.059559
             }
           ]
         },
@@ -3022,27 +3022,27 @@
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated focus range",
-              "score": 0.931783
+              "score": 0.842589
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated Demonstration Notes",
-              "score": 0.73822
+              "score": 0.731685
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Focus",
-              "score": 0.72046
+              "score": 0.630776
             },
             {
-              "path": "src/simulation_copilot/planning.py",
+              "path": "src/simulation_copilot/tools.py",
               "section": "Document",
-              "score": 0.497147
+              "score": 0.569101
             },
             {
-              "path": "docs/knowledge/workflow_guide.md",
-              "section": "Validate configuration",
-              "score": 0.45
+              "path": "src/simulation_copilot/tools.py",
+              "section": "Document",
+              "score": 0.491562
             }
           ]
         }
@@ -3092,27 +3092,27 @@
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated focus range",
-              "score": 51.619028
+              "score": 52.733106
             },
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 34.364705
+              "score": 35.825837
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated Demonstration Notes",
-              "score": 24.734819
+              "score": 25.771203
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated completion shortcut",
-              "score": 22.878268
+              "score": 23.880672
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Focus",
-              "score": 16.439473
+              "score": 15.998975
             }
           ]
         },
@@ -3123,27 +3123,27 @@
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated focus range",
-              "score": 0.555067
+              "score": 0.55013
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated Demonstration Notes",
-              "score": 0.289761
-            },
-            {
-              "path": "docs/knowledge/parameter_reference.md",
-              "section": "Focus",
-              "score": 0.210136
+              "score": 0.293969
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated completion shortcut",
-              "score": 0.207109
+              "score": 0.211312
+            },
+            {
+              "path": "docs/knowledge/parameter_reference.md",
+              "section": "Focus",
+              "score": 0.193205
             },
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 0.132855
+              "score": 0.140728
             }
           ]
         },
@@ -3159,22 +3159,22 @@
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated Demonstration Notes",
-              "score": 0.502748
+              "score": 0.513819
             },
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 0.431224
+              "score": 0.446416
             },
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated completion shortcut",
-              "score": 0.404665
+              "score": 0.415049
             },
             {
               "path": "docs/knowledge/parameter_reference.md",
               "section": "Focus",
-              "score": 0.351533
+              "score": 0.329687
             }
           ]
         }
@@ -3224,27 +3224,27 @@
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated completion shortcut",
-              "score": 53.133411
+              "score": 54.956679
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Completion state",
-              "score": 36.888796
+              "score": 38.536817
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 32.987508
+              "score": 33.97827
             },
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 30.63571
+              "score": 31.388613
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 23.53604
+              "score": 24.119045
             }
           ]
         },
@@ -3255,27 +3255,27 @@
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated completion shortcut",
-              "score": 0.46111
+              "score": 0.460402
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Completion state",
-              "score": 0.364183
+              "score": 0.379472
             },
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 0.163955
+              "score": 0.16942
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Synthetic Result Acceptance Rules",
-              "score": 0.135362
+              "score": 0.141259
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 0.089626
+              "score": 0.08964
             }
           ]
         },
@@ -3291,22 +3291,22 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Completion state",
-              "score": 0.746808
+              "score": 0.76887
             },
             {
               "path": "src/simulation_copilot/qa.py",
               "section": "Document",
-              "score": 0.455022
+              "score": 0.459409
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 0.386283
+              "score": 0.385307
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Synthetic Result Acceptance Rules",
-              "score": 0.285626
+              "score": 0.295269
             }
           ]
         }
@@ -3356,27 +3356,27 @@
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated completion shortcut",
-              "score": 38.837054
+              "score": 40.587015
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Synthetic Result Acceptance Rules",
-              "score": 26.317784
+              "score": 27.693966
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Completion state",
-              "score": 25.514694
+              "score": 26.763452
             },
             {
               "path": "src/simulation_copilot/diagnostics.py",
               "section": "Document",
-              "score": 16.42196
+              "score": 17.169516
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Acceptance outcome",
-              "score": 11.68656
+              "score": 12.349166
             }
           ]
         },
@@ -3387,27 +3387,27 @@
             {
               "path": "docs/knowledge/deprecated_notes.md",
               "section": "Deprecated completion shortcut",
-              "score": 0.374563
+              "score": 0.376366
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Synthetic Result Acceptance Rules",
-              "score": 0.345834
+              "score": 0.357787
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Completion state",
-              "score": 0.211316
+              "score": 0.220847
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Budget compliance",
-              "score": 0.119709
+              "score": 0.126744
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Acceptance outcome",
-              "score": 0.117863
+              "score": 0.123083
             }
           ]
         },
@@ -3423,22 +3423,22 @@
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Synthetic Result Acceptance Rules",
-              "score": 0.812756
+              "score": 0.829901
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Completion state",
-              "score": 0.605927
+              "score": 0.619468
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Budget compliance",
-              "score": 0.311189
+              "score": 0.322135
             },
             {
               "path": "docs/knowledge/acceptance_rules.md",
               "section": "Acceptance outcome",
-              "score": 0.308479
+              "score": 0.316786
             }
           ]
         }

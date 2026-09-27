@@ -9,4 +9,5 @@ export PYTHONPATH="${ROOT}/src${PYTHONPATH:+:${PYTHONPATH}}"
 "${PYTHON}" -m simulation_copilot.build_assets --root "${ROOT}"
 "${PYTHON}" -m unittest discover -s tests -v
 "${PYTHON}" scripts/evaluate_rag.py --root "${ROOT}" >/dev/null
+"${PYTHON}" scripts/evaluate_agent.py --root "${ROOT}" >/dev/null
 "${PYTHON}" scripts/public_audit.py --root "${ROOT}"

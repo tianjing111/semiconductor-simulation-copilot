@@ -91,6 +91,11 @@ class Handler(BaseHTTPRequestHandler):
                     str(payload.get("question", "")),
                     str(payload.get("mode", "hybrid")),
                 ))
+            elif parsed.path == "/api/agent":
+                context = payload.get("context", {})
+                if not isinstance(context, dict):
+                    raise ValueError("context must be a JSON object")
+                self.send_json(self.service.agent_request(str(payload.get("request", "")), context))
             else:
                 self.send_json({"error": "Unknown API route"}, HTTPStatus.NOT_FOUND)
         except (OSError, ValueError, json.JSONDecodeError) as exc:

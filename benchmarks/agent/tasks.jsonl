@@ -1,0 +1,30 @@
+{"id":"A01","family":"knowledge","prompt":"What signed focus values are valid?","expected_tool":"search_docs","expected_status":"ANSWERED","requires_citation":true}
+{"id":"A02","family":"knowledge","prompt":"What dose range is accepted by the public demo?","expected_tool":"search_docs","expected_status":"ANSWERED","requires_citation":true}
+{"id":"A03","family":"knowledge","prompt":"Which grid_size values are supported?","expected_tool":"search_docs","expected_status":"ANSWERED","requires_citation":true}
+{"id":"A04","family":"knowledge","prompt":"What should I check after a No usable samples found error?","expected_tool":"search_docs","expected_status":"ANSWERED","requires_citation":true}
+{"id":"A05","family":"knowledge","prompt":"What plasma etch chamber pressure should I use?","expected_tool":"search_docs","expected_status":"INSUFFICIENT_EVIDENCE","requires_citation":false}
+{"id":"A06","family":"knowledge","prompt":"What should I do?","expected_tool":"search_docs","expected_status":"CLARIFICATION_REQUIRED","requires_citation":false}
+{"id":"A07","family":"validate","prompt":"Check this configuration","fixture":"valid","expected_tool":"validate_config","expected_status":"VALID","requires_citation":true}
+{"id":"A08","family":"validate","prompt":"Validate this configuration before planning","fixture":"missing_task","expected_tool":"validate_config","expected_status":"INVALID","requires_citation":true}
+{"id":"A09","family":"validate","prompt":"Check whether these parameters are legal","fixture":"high_dose","expected_tool":"validate_config","expected_status":"INVALID","requires_citation":true}
+{"id":"A10","family":"validate","prompt":"Validate the focus setting","fixture":"bad_focus","expected_tool":"validate_config","expected_status":"INVALID","requires_citation":true}
+{"id":"A11","family":"validate","prompt":"Check this configuration and grid","fixture":"bad_grid","expected_tool":"validate_config","expected_status":"INVALID","requires_citation":true}
+{"id":"A12","family":"validate","prompt":"Validate this parameter set and its budget","fixture":"over_budget","expected_tool":"validate_config","expected_status":"INVALID","requires_citation":true}
+{"id":"A13","family":"plan","prompt":"Create a dry-run plan for human review","fixture":"valid","expected_tool":"create_dry_run","expected_status":"DRY_RUN_READY","requires_citation":true}
+{"id":"A14","family":"plan","prompt":"Prepare a dry run from this configuration","fixture":"duplicate_run","expected_tool":"create_dry_run","expected_status":"BLOCKED_INVALID_CONFIG","requires_citation":true}
+{"id":"A15","family":"plan","prompt":"Generate the dry-run plan","fixture":"zero_budget","expected_tool":"create_dry_run","expected_status":"BLOCKED_INVALID_CONFIG","requires_citation":true}
+{"id":"A16","family":"plan","prompt":"Plan these conditions without execution","fixture":"invalid_run_id","expected_tool":"create_dry_run","expected_status":"BLOCKED_INVALID_CONFIG","requires_citation":true}
+{"id":"A17","family":"plan","prompt":"Create the dry-run plan under this budget","fixture":"large_call_count","expected_tool":"create_dry_run","expected_status":"BLOCKED_INVALID_CONFIG","requires_citation":true}
+{"id":"A18","family":"plan","prompt":"Make a dry-run plan for these settings","fixture":"missing_conditions","expected_tool":"create_dry_run","expected_status":"BLOCKED_INVALID_CONFIG","requires_citation":true}
+{"id":"A19","family":"inspect","prompt":"Inspect run status","run_id":"layout holdout","expected_tool":"inspect_run","expected_status":"FOUND","requires_citation":true}
+{"id":"A20","family":"inspect","prompt":"Inspect the process holdout state","run_id":"process holdout","expected_tool":"inspect_run","expected_status":"FOUND","requires_citation":true}
+{"id":"A21","family":"inspect","prompt":"What is the state of the risk audit run?","run_id":"risk audit","expected_tool":"inspect_run","expected_status":"FOUND","requires_citation":true}
+{"id":"A22","family":"inspect","prompt":"Inspect the runtime profile run ID","run_id":"runtime profile","expected_tool":"inspect_run","expected_status":"FOUND","requires_citation":true}
+{"id":"A23","family":"inspect","prompt":"Inspect this run status","run_id":"unknown run","expected_tool":"inspect_run","expected_status":"NOT_FOUND","requires_citation":false}
+{"id":"A24","family":"inspect","prompt":"Inspect the run state","run_id":"","expected_tool":"inspect_run","expected_status":"NEEDS_INPUT","requires_citation":false}
+{"id":"A25","family":"summarize","prompt":"Summarize the layout holdout result metrics","run_id":"layout holdout","expected_tool":"summarize_results","expected_status":"SUMMARY_READY","requires_citation":true}
+{"id":"A26","family":"summarize","prompt":"Give me a summary of the process holdout result","run_id":"process holdout","expected_tool":"summarize_results","expected_status":"SUMMARY_READY","requires_citation":true}
+{"id":"A27","family":"summarize","prompt":"Summarize the risk audit metrics","run_id":"risk audit","expected_tool":"summarize_results","expected_status":"SUMMARY_READY","requires_citation":true}
+{"id":"A28","family":"summarize","prompt":"Summarize the runtime profile results","run_id":"runtime profile","expected_tool":"summarize_results","expected_status":"SUMMARY_READY","requires_citation":true}
+{"id":"A29","family":"summarize","prompt":"Summarize this result","run_id":"unknown run","expected_tool":"summarize_results","expected_status":"NOT_FOUND","requires_citation":false}
+{"id":"A30","family":"summarize","prompt":"Summarize the metrics","run_id":"","expected_tool":"summarize_results","expected_status":"NEEDS_INPUT","requires_citation":false}

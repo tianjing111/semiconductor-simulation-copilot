@@ -9,8 +9,7 @@ class PlanContractError(ValueError):
     pass
 
 
-def load_and_validate_plan(path: Path, source_label: str | None = None) -> dict[str, Any]:
-    plan = json.loads(path.read_text(encoding="utf-8"))
+def validate_plan_payload(plan: dict[str, Any], source_label: str = "in_memory_plan") -> dict[str, Any]:
     if plan.get("execution_mode") != "dry_run":
         raise PlanContractError("Only dry-run plans are accepted")
     commands = plan.get("commands")
@@ -42,5 +41,10 @@ def load_and_validate_plan(path: Path, source_label: str | None = None) -> dict[
             }
             for command in commands
         ],
-        "source": source_label or path.name,
+        "source": source_label,
     }
+
+
+def load_and_validate_plan(path: Path, source_label: str | None = None) -> dict[str, Any]:
+    plan = json.loads(path.read_text(encoding="utf-8"))
+    return validate_plan_payload(plan, source_label or path.name)

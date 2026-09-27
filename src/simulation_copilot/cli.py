@@ -21,6 +21,10 @@ def main() -> None:
     ask = subparsers.add_parser("ask")
     ask.add_argument("question")
     ask.add_argument("--mode", choices=("keyword", "tfidf", "hybrid"), default="hybrid")
+    agent = subparsers.add_parser("agent")
+    agent.add_argument("request")
+    agent.add_argument("--config", type=Path)
+    agent.add_argument("--run-id", default="")
     args = parser.parse_args()
     root = args.root.resolve()
     if args.command == "build-assets":
@@ -31,6 +35,11 @@ def main() -> None:
             result = service.diagnose(args.log.read_text(encoding="utf-8", errors="replace"))
         elif args.command == "ask":
             result = service.ask(args.question, args.mode)
+        elif args.command == "agent":
+            context = {"run_id": args.run_id}
+            if args.config:
+                context["config"] = json.loads(args.config.read_text(encoding="utf-8"))
+            result = service.agent_request(args.request, context)
         else:
             result = {"results": service.search(args.query, mode=args.mode)}
     print(json.dumps(result, indent=2, ensure_ascii=True))

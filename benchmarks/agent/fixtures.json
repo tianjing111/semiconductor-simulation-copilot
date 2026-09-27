@@ -1,0 +1,57 @@
+{
+  "valid": {
+    "task_id": "demo_agent_task",
+    "grid_size": 128,
+    "max_solver_calls": 2,
+    "conditions": [
+      {"run_id": "dose44_focus_minus0p03", "dose": 44, "focus": -0.03},
+      {"run_id": "dose48_focus_plus0p03", "dose": 48, "focus": 0.03}
+    ]
+  },
+  "missing_task": {
+    "grid_size": 128,
+    "max_solver_calls": 1,
+    "conditions": [{"run_id": "dose46_focus0", "dose": 46, "focus": 0.0}]
+  },
+  "high_dose": {
+    "task_id": "high_dose", "grid_size": 128, "max_solver_calls": 1,
+    "conditions": [{"run_id": "dose99_focus0", "dose": 99, "focus": 0.0}]
+  },
+  "bad_focus": {
+    "task_id": "bad_focus", "grid_size": 128, "max_solver_calls": 1,
+    "conditions": [{"run_id": "dose46_focus_bad", "dose": 46, "focus": 0.2}]
+  },
+  "bad_grid": {
+    "task_id": "bad_grid", "grid_size": 1024, "max_solver_calls": 1,
+    "conditions": [{"run_id": "dose46_focus0", "dose": 46, "focus": 0.0}]
+  },
+  "over_budget": {
+    "task_id": "over_budget", "grid_size": 128, "max_solver_calls": 1,
+    "conditions": [
+      {"run_id": "dose44_focus0", "dose": 44, "focus": 0.0},
+      {"run_id": "dose48_focus0", "dose": 48, "focus": 0.0}
+    ]
+  },
+  "duplicate_run": {
+    "task_id": "duplicate_run", "grid_size": 128, "max_solver_calls": 2,
+    "conditions": [
+      {"run_id": "same_run", "dose": 44, "focus": 0.0},
+      {"run_id": "same_run", "dose": 48, "focus": 0.0}
+    ]
+  },
+  "zero_budget": {
+    "task_id": "zero_budget", "grid_size": 128, "max_solver_calls": 0,
+    "conditions": [{"run_id": "dose46_focus0", "dose": 46, "focus": 0.0}]
+  },
+  "invalid_run_id": {
+    "task_id": "invalid_run", "grid_size": 128, "max_solver_calls": 1,
+    "conditions": [{"run_id": "Unsafe Run!", "dose": 46, "focus": 0.0}]
+  },
+  "large_call_count": {
+    "task_id": "large_call_count", "grid_size": 128, "max_solver_calls": 2,
+    "conditions": [{"run_id": "dose46_focus0", "dose": 46, "focus": 0.0, "solver_calls_if_live": 3}]
+  },
+  "missing_conditions": {
+    "task_id": "missing_conditions", "grid_size": 128, "max_solver_calls": 2
+  }
+}

@@ -7,9 +7,9 @@ It is a regression result, not a production-quality claim.
 
 | Mode | Cases | Recall@5 | MRR |
 | --- | ---: | ---: | ---: |
-| keyword | 26 | 0.885 | 0.686 |
-| tfidf | 26 | 1.000 | 0.933 |
-| hybrid | 26 | 1.000 | 0.926 |
+| keyword | 26 | 0.846 | 0.629 |
+| tfidf | 26 | 1.000 | 0.912 |
+| hybrid | 26 | 0.962 | 0.859 |
 
 ## Grounded answering
 
@@ -22,6 +22,8 @@ It is a regression result, not a production-quality claim.
 
 ## Failed cases
 
-No failures on the frozen public regression set.
+| Case | Expected | Observed | Hybrid retrieval | Citation |
+| --- | --- | --- | --- | --- |
+| rag-004 | ANSWERED | ANSWERED | False | True |
 
 Full per-case outputs are available in `results.json`.

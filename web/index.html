@@ -24,6 +24,7 @@
   <div class="app-shell">
     <nav class="sidebar" aria-label="Workspace navigation">
       <button class="nav-item active" data-view="diagnose">Diagnose</button>
+      <button class="nav-item" data-view="agent">Copilot</button>
       <button class="nav-item" data-view="knowledge">Knowledge</button>
       <button class="nav-item" data-view="memory">Experiments</button>
       <button class="nav-item" data-view="planning">Planning</button>
@@ -43,7 +44,7 @@
             <h1>Diagnose a simulation run</h1>
           </div>
           <div class="metric-strip" aria-label="System status">
-            <div><span id="knowledge-count">80</span><small>knowledge chunks</small></div>
+            <div><span id="knowledge-count">95</span><small>knowledge chunks</small></div>
             <div><span id="experiment-count">4</span><small>experiment cards</small></div>
             <div><span id="data-policy">Synthetic</span><small>data policy</small></div>
           </div>
@@ -84,6 +85,54 @@
             <h2>No log analyzed</h2>
             <p>Paste a failure trace or open a local log to begin.</p>
           </div>
+        </section>
+      </section>
+
+      <section class="view" id="view-agent">
+        <div class="view-heading">
+          <div>
+            <p class="eyebrow">Bounded tool orchestration</p>
+            <h1>Review a simulation workflow</h1>
+          </div>
+          <div class="metric-strip" aria-label="Agent safety status">
+            <div><span>5</span><small>allowlisted tools</small></div>
+            <div><span>1</span><small>maximum calls</small></div>
+            <div><span>Blocked</span><small>live execution</small></div>
+          </div>
+        </div>
+        <div class="agent-grid">
+          <section class="input-panel">
+            <div class="panel-header"><h2>Workflow request</h2></div>
+            <div class="agent-form">
+              <label for="agent-scenario">Synthetic demonstration context</label>
+              <select id="agent-scenario">
+                <option value="knowledge">Knowledge question</option>
+                <option value="validate">Configuration validation</option>
+                <option value="plan">Dry-run planning</option>
+                <option value="inspect">Run inspection</option>
+                <option value="summarize">Result summary</option>
+              </select>
+              <label for="agent-request">Request</label>
+              <textarea id="agent-request" spellcheck="false" aria-label="Agent workflow request"></textarea>
+            </div>
+            <div class="input-footer">
+              <span>Only bundled synthetic context is attached to this demonstration.</span>
+              <button class="primary-button" id="agent-run-button" type="button">Run review</button>
+            </div>
+          </section>
+          <aside class="boundary-panel">
+            <div class="panel-header"><h2>Control ownership</h2></div>
+            <dl class="boundary-list">
+              <div><dt>Intent</dt><dd>Agent</dd></div>
+              <div><dt>Parameters</dt><dd>Code</dd></div>
+              <div><dt>Validation</dt><dd>Code</dd></div>
+              <div><dt>Execution</dt><dd class="blocked">Unavailable</dd></div>
+            </dl>
+            <div class="boundary-footnote">The model may select one tool. It cannot invent configuration values, expand permissions or launch a simulator.</div>
+          </aside>
+        </div>
+        <section class="result-region" id="agent-results" aria-live="polite">
+          <div class="empty-state"><div class="empty-code">BOUNDED</div><h2>No workflow reviewed</h2><p>Select a synthetic scenario and run the request.</p></div>
         </section>
       </section>
 
